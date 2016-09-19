@@ -1,0 +1,23 @@
+<div class="quadrants">
+  <div class="quadrant q1" [ngStyle]="state.css.q1">
+    <span [innerHTML]="logo" class="logo"></span>
+  </div>
+  <header class="quadrant q2" [ngStyle]="state.css.q2">
+    <h1 class="main-title">{{title}}</h1>
+  </header>
+  <nav class="quadrant q3" [ngStyle]="state.css.q3">
+
+  </nav>
+  <div class="quadrant q4" [ngStyle]="state.css.q4">
+      <router-outlet></router-outlet>
+      <div class="controls">
+        <div class="prev"><</div>
+        <div class="next">></div>
+        <div class="bar">
+          {{pagination.total}} / 
+          {{pagination.id}}
+          <div class="bar-fill"></div>
+        </div>
+      </div>
+  </div>
+</div>

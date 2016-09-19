@@ -1,0 +1,14 @@
+<div class="mobile-icon">
+  <div class="nav-icon" [class.open]="menuOpened" (click)="menuOpened = !menuOpened">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<ul [class.close-menu]="!menuOpened" class="mobile-menu">
+  <li *ngFor="let navItem of navItems">
+    <a routerLinkActive="active" class="navLink" routerLink="{{navItem.link}}">{{navItem.text}}</a>
+    <!-- <a [routerLink]='{{navItem.link}}' routerLinkActive="link-active">{{navItem.text}}</a> -->
+  </li>
+</ul>
