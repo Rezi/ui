@@ -10,6 +10,14 @@ export const PageItems: PageItem[] = [
     name:"about",
     content:"<ul><li>about 1</li></ul>"
   },{
+    id:2,
+    name:"about",
+    content:"<ul><li>about 2</li></ul>"
+  },{
+    id:3,
+    name:"about",
+    content:"<ul><li>about 3</li></ul>"
+  },{
     id:0,
     name:"layout",
     content:"<ul><li>layout 0</li></ul>"

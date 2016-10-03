@@ -10,48 +10,53 @@ import { GuidelinesComponent } from './page/guidelines/guidelines.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
-    pathMatch: 'full'
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'about/:id',
-    component: AboutComponent
-  },
-  {
-    path: 'layout',
-    component: LayoutComponent
-  },
-  {
-    path: 'layout/:id',
-    component: LayoutComponent
-  },
-  {
-    path: 'colors',
-    component: ColorsComponent
-  },
-  {
-    path: 'colors/:id',
-    component: ColorsComponent
-  },
-  {
-    path: 'usability',
-    component: UsabilityComponent
-  },
-  {
-    path: 'usability/:id',
-    component: UsabilityComponent
-  },
-  {
-    path: 'guidelines',
-    component: UsabilityComponent
-  },
-  {
-    path: 'guidelines/:id',
-    component: GuidelinesComponent
+    children: [
+      {
+        path: '',
+        redirectTo: 'about',
+        pathMatch: 'full'
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'about/:id',
+        component: AboutComponent
+      },
+      {
+        path: 'layout',
+        component: LayoutComponent
+      },
+      {
+        path: 'layout/:id',
+        component: LayoutComponent
+      },
+      {
+        path: 'colors',
+        component: ColorsComponent
+      },
+      {
+        path: 'colors/:id',
+        component: ColorsComponent
+      },
+      {
+        path: 'usability',
+        component: UsabilityComponent
+      },
+      {
+        path: 'usability/:id',
+        component: UsabilityComponent
+      },
+      {
+        path: 'guidelines',
+        component: UsabilityComponent
+      },
+      {
+        path: 'guidelines/:id',
+        component: GuidelinesComponent
+      }
+    ]
   }
 ];
 

@@ -21,11 +21,11 @@ export class PageService {
       return el.name === pageName;
     });
 
-    let allSubPagesNumber = pages.length;
+    let allSubPagesNumber = pages.length - 1;
 
     let pagination = {
       total: allSubPagesNumber,
-      id: (id + 1)
+      id: id
     };
 
     return pagination;

@@ -41,7 +41,6 @@ export class StateService {
     cssString = cssString.replace (/"/g,'');
     cssString = cssString.replace (/,/g,';');
     this.addGlobalCss(cssString);
-    console.log(cssString);
 
     return finalObj;
   }

@@ -24,10 +24,20 @@ export const StateItems: StateItem[] = [
   {
     id:"/colors",
     css:{
-      q1: {"background-color":"#E40045", color: "#B00035"},
-      q2: {"background-color":"#FF7400", color: "#FFAA63"},
-      q3: {"background-color":"#009999"},
-      q4: {"background-color":"#67E300", color: "#3F8A00"},
+      q1: {"background-color":"#B1487D", color: "#D074A3"},
+      q2: {"background-color":"#D86D57", color: "#BB4931"},
+      q3: {"background-color":"#3F9D62"},
+      q4: {"background-color":"#9CC851", color: "#5C8713"},
+      global:{}
+    }
+  },
+  {
+    id:"/colors/1",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
       global:{}
     }
   },

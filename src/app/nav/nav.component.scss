@@ -1,3 +1,5 @@
+@import '../_global-variables';
+
 ul {
   list-style: none;
   padding: 0;
@@ -6,7 +8,7 @@ ul {
 }
 
 .navLink{
-  color: #FFF;
+  color: $color-link;
   font-size: 1.5rem;
   line-height: 1.4;
   text-decoration: none;

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding,
+import { Component, OnInit, OnDestroy, HostBinding,
          trigger, transition, animate,
          style, state  } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -55,6 +55,8 @@ export class AboutComponent implements OnInit{
   page:PageItem;
 
   ngOnInit(): void {
+
+    console.log('opened');
 
     this.route.params.forEach((params: Params) => {
       let id = +params['id'];

@@ -10,14 +10,16 @@
   </nav>
   <div class="quadrant q4" [ngStyle]="state.css.q4">
       <router-outlet></router-outlet>
-      <div class="controls">
-        <div class="prev"><</div>
-        <div class="next">></div>
+      <div class="controls" *ngIf="paginationControl">
+        <a [routerLink]="paginationControl.prevLink" class="prev" [ngClass]="{'disabled': paginationControl.prevDisabled}"><</a>
+        <a [routerLink]="paginationControl.nextLink" class="next" [ngClass]="{'disabled': paginationControl.nextDisabled}">></a>
         <div class="bar">
-          {{pagination.total}} / 
-          {{pagination.id}}
-          <div class="bar-fill"></div>
+          <div *ngFor="let step of pagination" [ngClass]="step.class" class="bar-step">
+            <a class="bar-link" [routerLink]="[step.link]"></a>
+          </div>
         </div>
+
+
       </div>
   </div>
 </div>
