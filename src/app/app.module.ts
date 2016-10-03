@@ -11,10 +11,13 @@ import { ColorsComponent } from './page/colors/colors.component';
 import { UsabilityComponent } from './page/usability/usability.component';
 import { GuidelinesComponent } from './page/guidelines/guidelines.component';
 
+import { Angular2DataTableModule } from 'angular2-data-table';
+
 @NgModule({
   imports: [
     BrowserModule,
-    routing
+    routing,
+    Angular2DataTableModule
   ],
   declarations: [
     AppComponent,
