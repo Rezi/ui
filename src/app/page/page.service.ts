@@ -4,6 +4,17 @@ import { PageItems } from './page.items';
 
 @Injectable()
 export class PageService {
+
+  activePage:PageItem; 
+
+ /* getActivePage(){
+    return this.activePage;
+  }
+
+  setActivePage(page:PageItem){
+    this.activePage = page;
+  }*/
+
   getPage(id:number, pageName:string){
 
     let page:PageItem[];
@@ -11,6 +22,10 @@ export class PageService {
     page = PageItems.filter((el)=>{
       return el.id === id && el.name === pageName;
     })
+
+    this.activePage = page[0];
+
+    console.log(this.activePage);
 
     return page[0];
   }

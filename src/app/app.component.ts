@@ -5,6 +5,7 @@ import '../../public/css/styles.css';
 
 import {StateService} from './state/state.service';
 import {PageService} from './page/page.service';
+import {PageItem} from './page/page.interface';
 
 import {StateItem} from './state/state.interface';
 
@@ -25,7 +26,7 @@ interface paginationControll {
 export class AppComponent{
 
   logo = 'CN ux&nbsp;&&nbsp;ui guide';
-  title = 'About the guide';
+  page:PageItem;
   pagination:{}[];
   paginationControl:paginationControll;
 
@@ -40,6 +41,8 @@ export class AppComponent{
     private pageService: PageService,
     router:Router
   ) {
+
+    this.pageService = pageService;
 
     router.events.subscribe((event) => {
       if(event instanceof NavigationStart) {

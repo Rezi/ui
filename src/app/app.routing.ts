@@ -50,7 +50,7 @@ const appRoutes: Routes = [
       },
       {
         path: 'guidelines',
-        component: UsabilityComponent
+        component: GuidelinesComponent
       },
       {
         path: 'guidelines/:id',

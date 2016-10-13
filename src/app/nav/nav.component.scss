@@ -9,7 +9,7 @@ ul {
 
 .navLink{
   color: $color-link;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   line-height: 1.4;
   text-decoration: none;
 }
@@ -96,7 +96,7 @@ ul {
 
 /* mobile web */
 
-@media (max-width:520px){
+@media (max-width:660px){
 
   .hide-menu {
     display: none;
@@ -125,7 +125,7 @@ ul {
   }
 }
 
-@media (min-width:521px){
+@media (min-width:661px){
 
   .mobile-menu {
     right:initial !important;

@@ -10,9 +10,41 @@ body, html {
     width: 100%;
     color: #fff;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 my-app {
   height: 100%;
   width: 100%;
+}
+
+.q4 > ng-component {
+    width: 100%; 
+    padding: 30px 100px 20px;
+    overflow: scroll;
+    flex-grow: 1;
+}
+
+.q4 ng-component ul{
+    padding: 0;
+}
+
+.q4 ng-component ul li{
+    padding: 4px 0;
+    font-size: 1.3rem
+}
+
+.q4 ng-component ul.list-minified li{
+    padding: 2px 0;
+}
+
+
+.example-img {
+    max-height: 150px;
+}
+
+@media (max-width:660px){
+    .q4 > ng-component {
+        padding: 30px 40px 20px;
+    }
 }

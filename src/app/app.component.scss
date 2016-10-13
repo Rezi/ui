@@ -8,7 +8,7 @@ main {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 0.9;
   display: inline-block;
   max-width: 200px;
@@ -30,7 +30,6 @@ main {
   .q1 {
     flex: 50% 1 0;
     height: 50%;
-    min-width: 200px;
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
@@ -39,33 +38,30 @@ main {
   .q2 {
     flex: 50% 1 0;
     height: 50%;
-    min-width: 200px;
-    justify-content: center;
     align-items: center;
+    padding-left: 100px; 
 
   }
 
   .q3 {
     flex: 50% 1 0;
     height: 50%;
-    min-width: 200px;
     justify-content: flex-end;
   }
 
   .q4 {
     flex: 50% 1 0;
     height: 50%;
-    min-width: 200px;
     align-items: center;
     justify-content: center;
     padding: 0;
-    flex-wrap: wrap;
+    flex-direction: column;  
   }
 }
 
 .controls {
-  flex: 1 0 100%;
-  align-self: flex-end;
+  flex: 0 0 60px;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -122,50 +118,51 @@ main {
 
 
 
-@media (max-width:520px){
+@media (max-width:660px){
   .logo {
-    font-size: 1.2rem;
-    max-width: none;
+    font-size: 1.2rem !important;
+    max-width: none !important;
   }
 
   .main-title {
-    font-size: 1.5rem;
-    color: #FFAA63;
+    font-size: 1.5rem !important;
   }
 
   .quadrants{
     .q1 {
-      flex: 80px 0 0;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      flex: 80px 0 0 !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
     }
 
     .q2 {
-      flex-shrink: 1;
-      flex-grow: 1;
-      flex-basis: calc(100% - 140px);
-      overflow: hidden;
-    }
-
-    .q3 {
-      flex: 60px 0 0;
-      align-items: center;
+      flex-shrink: 1 !important;
+      flex-grow: 1 !important;
+      flex-basis: calc(100% - 140px) !important;
+      overflow: hidden !important;
       justify-content: center;
     }
 
+    .q3 {
+      flex: 60px 0 0 !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
     .q1, .q2, .q3 {
-      height: 70px;
+      height: 70px !important;
+      padding: 10px !important;
     }
 
     .q4 {
-      flex: 100% 0 0;
-      height: calc(100% - 70px);
+      flex: 100% 0 0 !important;
+      height: calc(100% - 70px) !important;
     }
 
     .quadrant {
-      min-width: initial;
-      padding: 10px;
+      min-width: initial !important;      
+      border:none  !important;
     }
   }
 }

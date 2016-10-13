@@ -3,7 +3,7 @@
     <span [innerHTML]="logo" class="logo"></span>
   </div>
   <header class="quadrant q2" [ngStyle]="state.css.q2">
-    <h1 class="main-title">{{title}}</h1>
+    <h1 class="main-title" *ngIf="pageService.activePage" >{{pageService.activePage.translation}}</h1>
   </header>
   <nav class="quadrant q3" [ngStyle]="state.css.q3">
 

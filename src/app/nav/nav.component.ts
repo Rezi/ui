@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavItem } from './nav.interface';
 
 const navItems: NavItem[] = [
-  {id:'about', text:"About the guide",link:"/about"},
+  {id:'about', text:"O příručce",link:"/about"},
   {id:'layout',text:"Layout",link:"/layout"},
-  {id:'colors',text:"Colors",link:"/colors"},
-  {id:'usability',text:"Usability",link:"/usability"},
+  {id:'colors',text:"Barvy",link:"/colors"},
+  {id:'usability',text:"Použitelnost",link:"/usability"},
   {id:'guidelines',text:"Guidelines",link:"/guidelines"},
 ];
 
