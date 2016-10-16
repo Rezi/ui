@@ -8,7 +8,7 @@
 </div>
 <ul [class.close-menu]="!menuOpened" class="mobile-menu">
   <li *ngFor="let navItem of navItems">
-    <a [routerLinkActive]="['active']" class="navLink" routerLink="{{navItem.link}}">{{navItem.text}}</a>
+    <a [routerLinkActive]="['active']" class="navLink" (click)="menuOpened = false" routerLink="{{navItem.link}}">{{navItem.text}}</a>
     <!-- <a [routerLink]='{{navItem.link}}' routerLinkActive="link-active">{{navItem.text}}</a> -->
   </li>
 </ul>

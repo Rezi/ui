@@ -37,7 +37,7 @@ export const PageItems: PageItem[] = [
     primary:false,
     translation:"UX vs UI",
     content:`
-      <div class="container-fluid">  
+      <div class="container-fluid negative-margin">  
         <div class="row">       
           <div class="col-sm-6">
             <h1>UX</h1>
@@ -131,13 +131,15 @@ export const PageItems: PageItem[] = [
     primary:false,
     translation:"UX vs UI",
     content:`
-      <div class="container-fluid negative-margin">        
-        <div class="col-sm-12">
-          <h1 class="text-center">Co zahrnuje UX</h1>  
-          <span class="block-centered-600">
-            <img class="full-img" src="public/images/UI-in-UX.png"/>
-            <p class="text-right"><a href="http://www.odannyboy.com/" target="_blank">Obrázek: Dan Saffer</p>
-          <span>
+      <div class="container-fluid negative-margin"> 
+        <div class="row">        
+          <div class="col-sm-12">
+            <h1 class="text-center">Co zahrnuje UX</h1>  
+            <span class="block-centered-600">
+              <img class="full-img" src="public/images/UI-in-UX.png"/>
+              <p class="text-right"><a href="http://www.odannyboy.com/" target="_blank">Obrázek: Dan Saffer</a></p>
+            <span>
+          </div>
         </div>
       </div>
     `
@@ -156,22 +158,23 @@ export const PageItems: PageItem[] = [
     id:1,
     name:"layout",
     primary:false,
-    translation:"Layout - dříve",
+    translation:"Layout - tisk",
     content:`
       <ul>
         <li>
-          Zlatý řez (zlatá spirála) 1.618
+          Zlatý řez (zlatá spirála) 1.618 == matematika
           <br><br>
           <img class="example-img" src="public/images/spiral.jpg" />
         </li>
         <li>Fibonaceho řada 1,2,3,5,8,13 (8:13)</li>
         <li>Pravidla třetin</li>
+        <li>Fixní grid</li>
       </ul>`
   },{
     id:2,
     name:"layout",
     primary:false,
-    translation:"Layout - dnes",
+    translation:"Layout - digitální",
     content:`
       <h2>Digitální éra</h2>
       <ul>       
@@ -184,21 +187,23 @@ export const PageItems: PageItem[] = [
     id:3,
     name:"layout",
     primary:false,
-    translation:"Layout - dnes",
+    translation:"Layout - digitální",
     content:`
       <h2>Grid</h2>
-      <div class="container-fluid">   
-        <div class="row">     
-          <div class="col-md-6 col-sm-8 example-col-300"><div>.col-md-6 .col-sm-8</div></div>
-          <div class="col-md-3 col-sm-4 example-col-150"><div>.col-md-3 .col-sm-4</div></div>
-          <div class="col-md-3 col-sm-4 example-col-150"><div>.col-md-3 .col-sm-4</div></div>
-          <div class="col-md-6 col-sm-12 example-col-150"><div>.col-md-6 .col-sm-12</div></div>
-        </div>
-      </div>
       <ul>
         <li>
           Ukázka responsivního gridu vytvořeného pomocí knihovny twitter Bootstrap
         </li>
+      </ul>
+      <div class="container-fluid">   
+        <div class="row">     
+          <div class="col-md-6 col-sm-8 example-col-200"><div>.col-md-6 .col-sm-8</div></div>
+          <div class="col-md-3 col-sm-4 example-col-100"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-3 col-sm-4 example-col-100"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-6 col-sm-12 example-col-100"><div>.col-md-6 .col-sm-12</div></div>
+        </div>
+      </div>
+      <ul>
         <li>Mezi oblíbené knihovny obsahující Grid systémy patří např.:<br>
           <b>960 Grid, Zurb Foundation, Skeleton, Susy</b> a mnoho dalších
         </li>
@@ -219,9 +224,9 @@ export const PageItems: PageItem[] = [
     id:5,
     name:"layout",
     primary:false,
-    translation:"Layout a design - Dieter Rams",
+    translation:"Layout a design",
     content:`
-      <h2>Základní pravidla designu</h2>
+      <h2>Základní pravidla designu - Dieter Rams</h2>
       <ul class="list-minified">
         <li>Jednoduché je lepší než komplikované.</li>
         <li>Tiché je lepší než hlasité.</li>
@@ -243,13 +248,60 @@ export const PageItems: PageItem[] = [
     name:"colors",
     primary:true,
     translation:"Barvy",
-    content:"<ul><li>colors 0</li></ul>"
+    content:`
+    <ul>
+      <li>Barvy v designu vyjadřují emoce, dávají charakter a zdůrazňují</li>
+      <li>Plný význam, ale dostávají barvy až v kombinaci</li>
+      <li>Přesycenost barvami (jako v tomto případě) může vyvolávat chaos.</li>
+      <li>Vyvážené použítí dokáže zdůraznit na určité prvky.</li>
+    </ul>
+    
+    <div class="container-fluid negative-margin"> 
+        <div class="row">        
+          <div class="col-sm-12">
+            <img class="example-img-lg" src="public/images/colors.png" />
+            <p class="text-right"><a href="http://www.huffingtonpost.com/brian-honigman/psychology-color-design-infographic_b_2516608.html" target="_blank">Obrázek: the Huffington Post</a></p>
+          </div>
+        </div>
+      </div>`
   },{
     id:1,
     name:"colors",  
     primary:false,  
     translation:"Barvy",
-    content:"<ul><li>colors 1</li></ul>"
+    content:`
+      <h2>Jak vybrat barevné kombinace</h2>
+      <ul class="list-minified">
+        <li>Pozor na kobinace barev z opačného pólu spektra (viz nadpis)</li>
+        <li>Barevné kobinace se řídí určitými pravidly</li>
+        <li>Líbivá kombinace barev je čato jen matematickým vzorečkem</li>
+        <li>Výběr barev na základě matematických pravidel nabízí např.<a href="http://paletton.com/" target="_blank">Paletton.com</a>:</li>
+      </ul>
+      <img class="example-img-lg" src="public/images/color-picker.png" />`
+  },{
+    id:2,
+    name:"colors",  
+    primary:false,  
+    translation:"Barvy",
+    content:`
+      <h2>Barvoslepost</h2>
+      <ul class="list-minified">
+        <li>Cca 8% mužské populace trpí určitým typem barvosleposti</li>
+        <li>2% mužů zcela neodlišuje některé barvy</li>
+        <li>Takto vidí tuto prezentaci 1% mužů</li>
+      </ul>`
+  },{
+    id:3,
+    name:"colors",  
+    primary:false,  
+    translation:"Barvy",
+    content:`
+      <h2>Barevná vyváženost</h2>
+      <ul class="list-minified">
+        <li>Cca 8% mužské populace trpí určitým typem barvosleposti</li>
+        <li>2% mužů zcela neodlišuje některé barvy</li>
+        <li>Takto vidí tuto prezentaci 1% mužů</li>
+      </ul>`
   },{
     id:0,
     name:"usability",

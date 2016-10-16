@@ -17,7 +17,8 @@ export const StateItems: StateItem[] = [
         ".next:after": {"content":"'⇨'"},
         ".prev:after": {"content":"'⇦'"},
          ".next.next-section:after": {"transform":"rotate(90deg)"},
-         ".prev.prev-section:after": {"transform":"rotate(90deg)"}
+         ".prev.prev-section:after": {"transform":"rotate(90deg)"},
+         ".q4 ng-component ul li:before":{"color":"#c8c8c8"}         
       }
     }
   },
@@ -122,25 +123,16 @@ export const StateItems: StateItem[] = [
       global:{}
     }
   },
-  /*{
-    id:"/layout/2",
-    css:{
-      q1: {flex: "0 0 180px", "min-width": "180px", height: "130px", "font-size":"11px"},
-      q2: {flex: "1 0 auto", "min-width": "calc(100% - 180px)", height: "130px"},
-      q3: {flex: "0 0 180px", "min-width": "180px", height: "calc(100% - 130px)", "font-size":"13px"},
-      q4: {flex: "1 0 auto", "min-width": "calc(100% - 180px)", height: "calc(100% - 130px)"},
-      global:{}
-    }
-  },*/
   {
     id:"/colors",
     css:{
       q1: {"background":"#B1487D", color: "#D074A3"},
-      q2: {"background":"#D86D57", color: "#FDA08D"},
+      q2: {"background":"#D86D57", color: "#3F9D62"},
       q3: {"background":"#3F9D62"},
-      q4: {"background":"#9CC851", color: "#5C8713"},
+      q4: {"background":"#9CC851", color: "#374e0f"},
       global:{
-        ".navLink.active":{"background":"#9cc851"}
+        ".navLink.active":{"background":"#9cc851"},
+        ".q4 ng-component ul li:before":{"color":"#5C8713"}
       }
     }
   },
@@ -152,6 +144,32 @@ export const StateItems: StateItem[] = [
       q3: {},
       q4: {},
       global:{}
+    }
+  },
+  {
+    id:"/colors/2",
+    css:{
+      q1: {"background":"#4961A1", color: "#6F80B9"},
+      q2: {"background":"#9E9161", color: "#9C8E57"},
+      q3: {"background":"#928763"},
+      q4: {"background":"#DAC350", color: "#4c4e0f"},
+      global:{
+        ".navLink.active":{"background":"#DAC350"},
+        ".q4 ng-component ul li:before":{"color":"#848816"}
+      }
+    }
+  },
+  {
+    id:"/colors/3",
+    css:{
+      q1: {"background":"#4961A1", color: "#6F80B9"},
+      q2: {"background":"#9E9161", color: "#9C8E57"},
+      q3: {"background":"#928763"},
+      q4: {"background":"#DAC350", color: "#4c4e0f"},
+      global:{
+        ".navLink.active":{"background":"#DAC350"},
+        ".q4 ng-component ul li:before":{"color":"#848816"}
+      }
     }
   },
   {
