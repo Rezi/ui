@@ -25,10 +25,11 @@ main {
     display: flex;
     transition: all 0.5s;
     flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   .q1 {
-    flex: 50% 1 0;
+    width: 50%;
     height: 50%;
     justify-content: flex-end;
     align-items: flex-end;
@@ -36,7 +37,7 @@ main {
   }
 
   .q2 {
-    flex: 50% 1 0;
+    width: 50%;
     height: 50%;
     align-items: center;
     padding-left: 100px; 
@@ -44,13 +45,13 @@ main {
   }
 
   .q3 {
-    flex: 50% 1 0;
+    width: 50%;
     height: 50%;
     justify-content: flex-end;
   }
 
   .q4 {
-    flex: 50% 1 0;
+    width: 50%;
     height: 50%;
     align-items: center;
     justify-content: center;
@@ -60,7 +61,7 @@ main {
 }
 
 .controls {
-  flex: 0 0 60px;
+  flex: 0 0 73px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -68,21 +69,33 @@ main {
   justify-content: flex-end;
 
   .prev, .next {
-    height: 30px;
-    background-color:$color-q4-dark;
-    width: 30px;
-    border-radius: 50%;
+    border-radius: 25px;
     margin: 0 15px 15px 0;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $color-link;
     text-decoration: none;
+    max-height: 48px;
+    
+    
+    &:after {
+      transition: all 0.5s;
+    }
 
     &.disabled {
-      background-color: $color-q4-lighter;
       pointer-events: none;
+      background:#BBB ;
+
     }
+
+    /*&.prev-section{
+      transform: rotate(90deg);
+    }
+    &.next-section{
+      transform: rotate(90deg);
+    }*/
   }
 
 

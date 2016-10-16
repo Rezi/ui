@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { NavItem } from './nav.interface';
 
-const navItems: NavItem[] = [
-  {id:'about', text:"O příručce",link:"/about"},
-  {id:'layout',text:"Layout",link:"/layout"},
-  {id:'colors',text:"Barvy",link:"/colors"},
-  {id:'usability',text:"Použitelnost",link:"/usability"},
-  {id:'guidelines',text:"Guidelines",link:"/guidelines"},
-];
+import { PageService } from '../page/page.service'
 
 @Component({
   selector: 'nav',
@@ -16,6 +10,9 @@ const navItems: NavItem[] = [
 })
 
 export class NavComponent {
-  navItems = navItems;
+
+  constructor(private pageService: PageService){}
+
+  navItems = this.pageService.getNavigationData();
   menuOpened : boolean = false;
 }

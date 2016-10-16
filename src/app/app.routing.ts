@@ -1,11 +1,7 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent } from './page/about/about.component';
-import { LayoutComponent } from './page/layout/layout.component';
-import { ColorsComponent } from './page/colors/colors.component';
-import { UsabilityComponent } from './page/usability/usability.component';
-import { GuidelinesComponent } from './page/guidelines/guidelines.component';
+import { PageComponent } from './page/page.component';
 
 const appRoutes: Routes = [
   {
@@ -18,43 +14,43 @@ const appRoutes: Routes = [
       },
       {
         path: 'about',
-        component: AboutComponent
+        component: PageComponent
       },
       {
         path: 'about/:id',
-        component: AboutComponent
+        component: PageComponent
       },
       {
         path: 'layout',
-        component: LayoutComponent
+        component: PageComponent
       },
       {
         path: 'layout/:id',
-        component: LayoutComponent
+        component: PageComponent
       },
       {
         path: 'colors',
-        component: ColorsComponent
+        component: PageComponent
       },
       {
         path: 'colors/:id',
-        component: ColorsComponent
+        component: PageComponent
       },
       {
         path: 'usability',
-        component: UsabilityComponent
+        component: PageComponent
       },
       {
         path: 'usability/:id',
-        component: UsabilityComponent
+        component: PageComponent
       },
       {
         path: 'guidelines',
-        component: GuidelinesComponent
+        component: PageComponent
       },
       {
         path: 'guidelines/:id',
-        component: GuidelinesComponent
+        component: PageComponent
       }
     ]
   }

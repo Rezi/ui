@@ -4,35 +4,158 @@ export const PageItems: PageItem[] = [
   {
     id:0,
     name:"about",
+    primary:true,
     translation:"O příručce",
-    content:"<ul><li>about default</li></ul>"
+    content:`
+      <h2>Tato příručka:</h2>
+      <ul>
+        <li>Je interaktivní prezentací, představující základní koncepty UX&nbsp;&&nbsp;UI</li>
+        <li>Poukazuje na základní chyby při jejich implementaci</li>
+      </ul>`
   },{
     id:1,
     name:"about",
-    translation:"O příručce",
-    content:"<ul><li>about 1</li></ul>"
+    primary:false,
+    translation:"UX vs UI",
+    content:`
+      <div class="container-fluid negative-margin">  
+        <div class="row">      
+          <div class="col-sm-6">
+            <h3>UX</h3>
+            <img class="example-img" src="public/images/mindmap.png"/>
+          </div>
+          <div class="col-sm-6">
+            <h3>UI</h3>  
+            <img class="example-img" src="public/images/UI.jpg"/>
+          </div>
+        </div>
+      </div>
+    `
   },{
     id:2,
     name:"about",
-    translation:"O příručce",
-    content:"<ul><li>about 2</li></ul>"
+    primary:false,
+    translation:"UX vs UI",
+    content:`
+      <div class="container-fluid">  
+        <div class="row">       
+          <div class="col-sm-6">
+            <h1>UX</h1>
+            <img class="example-img enlarge-animate" src="public/images/mindmap.png"/>
+            <div class="list-wrapper">
+              <ul class="fade-in">
+                <li>UX = User&nbsp;Experience</li>
+                <li>Celkový uživatalský požitek z používáni služby či produktu</li>
+                <li>Úzce spojen s pojmem použitelnosti (usability)</li>
+                <li>Aplikace s dobrým UX by měla být ovladatelná prakticky kýmkoli a to bez použití manuálu.</li>
+                <li>UX staví na předešlých zkušenostech uživatele</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h1>UI</h1>  
+            <img class="example-img enlarge-animate" src="public/images/UI.jpg"/>
+            <div class="list-wrapper">
+              <ul class="fade-in">
+                <li>UI = User&nbsp;Interface = Uživatelské&nbsp;Rozhraní</li>
+                <li>Prostředí ve kterém dochází k interakci mezi uživatelem a počítačem</li>
+                <li>Jednotlivé obrazovky, funkční elementy (linky, tlačítka, ikonky)</li>
+                <li>I&nbsp;příkazová řádka je uživatelským rozhraním</li>
+                <li>Podstatou UI není otevřenost masám</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   },{
     id:3,
     name:"about",
-    translation:"O příručce",
-    content:"<ul><li>about 3</li></ul>"
+    primary:false,
+    translation:"UX vs UI",
+    content:`
+      <div class="container-fluid">   
+        <div class="row">      
+          <div class="col-sm-6">
+            <h1>UX</h1>
+            <br>
+              <h2>Strategie a Obsah</h2>
+              <ul class="list-minified">
+                <li>Analýza konkurence</li>
+                <li>Analýza zákazníků</li>
+                <li>Produktová strategie</li>
+                <li>Zlepšování obsahu</li>
+              </ul>
+
+              <h2>Navrhování</h2>
+              <ul class="list-minified">
+                <li>Wireframing</li>
+                <li>Prototyping</li>
+                <li>Testování v iteracích</li>
+              </ul>
+
+              <h2>Vývoj a Analýza</h2>
+              <ul class="list-minified">
+                <li>Koordinace s UI návrháři</li>
+                <li>Koordinace s vývojáři</li>
+                <li>Měření cílů</li>
+                <li><b>Analýza a Iterace</b></li>
+              </ul>
+          </div>
+          <div class="col-sm-6">
+            <h1>UI</h1>  
+            <br>
+              <h2>Vzhled a prezentace</h2>
+              <ul class="list-minified">
+                <li>Analýza zákazníků</li>
+                <li>Průzkum designu</li>
+                <li>Tvorba korporátního designu</li>
+                <li>Guidelines</li>
+              </ul>
+            
+
+              <h2>Responsivita a interaktivita</h2>
+              <ul class="list-minified">
+                <li>UI prototyping</li>
+                <li>Interaktivita a animace</li>
+                <li>Adaptace všem velikostem obrazkovky</li>
+                <li>Implementace s vývojářem</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    `
+  },{
+    id:4,
+    name:"about",
+    primary:false,
+    translation:"UX vs UI",
+    content:`
+      <div class="container-fluid negative-margin">        
+        <div class="col-sm-12">
+          <h1 class="text-center">Co zahrnuje UX</h1>  
+          <span class="block-centered-600">
+            <img class="full-img" src="public/images/UI-in-UX.png"/>
+            <p class="text-right"><a href="http://www.odannyboy.com/" target="_blank">Obrázek: Dan Saffer</p>
+          <span>
+        </div>
+      </div>
+    `
   },{
     id:0,
     name:"layout",
+    primary:true,
     translation:"Layout",
     content:`
       <h2>Co je to layout?</h2>
       <ul>
         <li>Layout = rozvržení a uspořádání informací</li>
+        <li>Proč není toto uspořádání optimální?</li>
       </ul>`
   },{
     id:1,
     name:"layout",
+    primary:false,
     translation:"Layout - dříve",
     content:`
       <ul>
@@ -47,6 +170,7 @@ export const PageItems: PageItem[] = [
   },{
     id:2,
     name:"layout",
+    primary:false,
     translation:"Layout - dnes",
     content:`
       <h2>Digitální éra</h2>
@@ -59,17 +183,43 @@ export const PageItems: PageItem[] = [
   },{
     id:3,
     name:"layout",
+    primary:false,
+    translation:"Layout - dnes",
+    content:`
+      <h2>Grid</h2>
+      <div class="container-fluid">   
+        <div class="row">     
+          <div class="col-md-6 col-sm-8 example-col-300"><div>.col-md-6 .col-sm-8</div></div>
+          <div class="col-md-3 col-sm-4 example-col-150"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-3 col-sm-4 example-col-150"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-6 col-sm-12 example-col-150"><div>.col-md-6 .col-sm-12</div></div>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Ukázka responsivního gridu vytvořeného pomocí knihovny twitter Bootstrap
+        </li>
+        <li>Mezi oblíbené knihovny obsahující Grid systémy patří např.:<br>
+          <b>960 Grid, Zurb Foundation, Skeleton, Susy</b> a mnoho dalších
+        </li>
+      </ul>`
+  },{
+    id:4,
+    name:"layout",
+    primary:false,
     translation:"Layout",
     content:`
       <h2>Co přetrvává</h2>
       <ul>
         <li>Práce s prázdným prostorem</li>
         <li>Práce s odsazením</li>
-      </ul>`
+      </ul>
+      <img class="example-img-lg" src="public/images/pixel-ad.png" />`
   },{
-    id:4,
+    id:5,
     name:"layout",
-    translation:"Layout a design",
+    primary:false,
+    translation:"Layout a design - Dieter Rams",
     content:`
       <h2>Základní pravidla designu</h2>
       <ul class="list-minified">
@@ -91,31 +241,37 @@ export const PageItems: PageItem[] = [
   },{
     id:0,
     name:"colors",
+    primary:true,
     translation:"Barvy",
     content:"<ul><li>colors 0</li></ul>"
   },{
     id:1,
-    name:"colors",    
+    name:"colors",  
+    primary:false,  
     translation:"Barvy",
     content:"<ul><li>colors 1</li></ul>"
   },{
     id:0,
     name:"usability",
+    primary:true,
     translation:"Použitelnost",
     content:"<ul><li>usability 0</li></ul>"
   },{
     id:1,
     name:"usability",
+    primary:false,
     translation:"Použitelnost",
     content:"<ul><li>usability 1</li></ul>"
   },{
     id:0,
     name:"guidelines",
+    primary:true,
     translation:"Guidelines",
     content:"<ul><li>guidelines 0</li></ul>"
   },{
     id:1,
     name:"guidelines",
+    primary:false,
     translation:"Guidelines",
     content:"<ul><li>guidelines 1</li></ul>"
   }

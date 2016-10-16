@@ -10,9 +10,17 @@ ul {
 .navLink{
   color: $color-link;
   font-size: 1.5em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-decoration: none;
+
+  &.active {
+    display: inline-block;
+    padding: 0 20px 0 15px;
+    margin: 0 -20px;
+    border-radius: 20px 0 0 20px;
+  }
 }
+
 
 .mobile-icon {
   display: none;
@@ -114,10 +122,11 @@ ul {
     padding: 10px;
     background-color: inherit;
     transition: all 0.5s;
+    z-index: 2;
   }
 
   ul>li>a{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .mobile-menu.close-menu {

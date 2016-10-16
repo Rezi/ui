@@ -22,10 +22,12 @@ export class StateService {
     StateItems.some(function(stateObj){
       finalObj = mergeDeep(finalObj, stateObj);
       if(stateObj.id === stateName){
-      realRoute = true;
+        realRoute = true;
       }
       return stateObj.id === stateName;
     })
+
+    
 
     if (!realRoute){
       finalObj = StateItems[0];

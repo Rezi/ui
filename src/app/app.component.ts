@@ -14,6 +14,8 @@ interface paginationControll {
   nextDisabled:boolean;
   nextLink:string;
   prevLink:string;
+  hasPrevSection:boolean;
+  hasNextSection:boolean;
 };
 
 @Component({
@@ -53,36 +55,45 @@ export class AppComponent{
 
   //called on every route change/load
   getState(page:string): void {
+    
     this.state = this.stateService.getState(page);
+
+    /* Pagination */
+    
     let pageRoute = page.split("/");
-    pageRoute[2] = pageRoute[2] || "0";
-    let pagination = this.pageService.getPageOfTypeLength(pageRoute[1], +pageRoute[2])
+    let pageId = pageRoute[1];
+    let pageNumber = pageRoute[2];
+
+    pageNumber = pageNumber || "0";
+    let pagination = this.pageService.getPageOfTypeLength(pageRoute[1], +pageNumber)
 
     this.pagination = [];
     this.paginationControl = {
       prevDisabled:true,
       nextDisabled:true,
       prevLink:"",
-      nextLink:""
+      nextLink:"",
+      hasPrevSection:false,
+      hasNextSection:false
     };
 
-    this.paginationControl.nextDisabled = true;
+    
 
     for (let i = 0; i <= pagination.total; i++){
       let paginationItem = {
-        link: "/" + pageRoute[1] + "/" + (i || ""),
-        text: pageRoute[1],
+        link: "/" + pageId + "/" + (i || ""),
+        text: pageId,
         class:""
       };
 
-      if(i < +pageRoute[2] && this.paginationControl.prevDisabled){
+      if(i < +pageNumber && this.paginationControl.prevDisabled){
         this.paginationControl.prevDisabled = false;
-        this.paginationControl.prevLink = "/" + pageRoute[1] + "/" + ((+pageRoute[2] - 1) || "");
+        this.paginationControl.prevLink = "/" + pageId + "/" + ((+pageNumber - 1) || "");
       }
 
-      if(i > +pageRoute[2] && this.paginationControl.nextDisabled){
+      if(i > +pageNumber && this.paginationControl.nextDisabled){
         this.paginationControl.nextDisabled = false;
-        this.paginationControl.nextLink = "/" + pageRoute[1] + "/" + i;
+        this.paginationControl.nextLink = "/" + pageId + "/" + i;
       }
 
       if(i <= pagination.id){
@@ -94,5 +105,30 @@ export class AppComponent{
       this.pagination.push(paginationItem);
     }
 
+    //check if there is a previous section (layout / colors etc.)
+    if(this.paginationControl.prevDisabled){
+      let prevSectionId = this.pageService.getPrevSectionId(pageId);
+      if(prevSectionId){
+        let pageParam = "/" + this.pageService.getPageOfTypeLength(prevSectionId, +pageNumber).total;
+        
+        this.paginationControl.prevDisabled = false;
+        this.paginationControl.prevLink = "/" + prevSectionId + pageParam;
+        this.paginationControl.hasPrevSection = true;
+      }
+      
+    }
+
+    //check if there is a next section (layout / colors etc.)
+    if(this.paginationControl.nextDisabled){
+      let nextSectionId = this.pageService.getNextSectionId(pageId);
+      if(nextSectionId){
+        this.paginationControl.nextDisabled = false;
+        this.paginationControl.nextLink = "/" + nextSectionId;
+        this.paginationControl.hasNextSection = true;
+      }
+      
+    }
+
+    
   }
 }

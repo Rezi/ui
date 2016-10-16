@@ -1,31 +1,22 @@
 import { Injectable } from '@angular/core';
 import { PageItem } from './page.interface';
 import { PageItems } from './page.items';
+import { NavItem } from '../nav/nav.interface';
 
 @Injectable()
 export class PageService {
 
   activePage:PageItem; 
 
- /* getActivePage(){
-    return this.activePage;
-  }
-
-  setActivePage(page:PageItem){
-    this.activePage = page;
-  }*/
-
   getPage(id:number, pageName:string){
 
     let page:PageItem[];
 
-    page = PageItems.filter((el)=>{
-      return el.id === id && el.name === pageName;
+    page = PageItems.filter((page)=>{
+      return page.id === id && page.name === pageName;
     })
 
     this.activePage = page[0];
-
-    console.log(this.activePage);
 
     return page[0];
   }
@@ -44,5 +35,43 @@ export class PageService {
     };
 
     return pagination;
+  }
+
+  public getNavigationData(): NavItem[]{
+    return PageItems.filter((page) => {
+      return page.primary;
+    }).map((page): NavItem =>  {
+      return {
+        id:page.name,
+        text:page.translation,
+        link: "/"+page.name
+      };
+    });
+  }
+
+  getPrevSectionId(sectionID: string){
+    let sections = this.getNavigationData();
+    let sectionIndex = sections.findIndex((section) => {
+      return section.id === sectionID; 
+    });
+
+    if(sectionIndex > 0){
+      return sections[sectionIndex - 1].id;
+    } else {
+      return "";
+    }
+  }
+
+  getNextSectionId(sectionID:string){
+    let sections = this.getNavigationData();
+    let sectionIndex = sections.findIndex((section) => {
+      return section.id === sectionID; 
+    });
+
+    if(sectionIndex < sections.length - 1){
+      return sections[sectionIndex + 1].id;
+    } else {
+      return "";
+    }
   }
 }
