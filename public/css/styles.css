@@ -28,6 +28,11 @@ my-app {
     flex-grow: 1;
 }
 
+.q4 > ng-component::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+
 .q4 > ng-component .negative-margin {
     padding: 0;
     margin: 0 -50px !important;

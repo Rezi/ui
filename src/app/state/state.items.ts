@@ -10,7 +10,7 @@ export const StateItems: StateItem[] = [
       q3: {width:"50%", height: "50%","background":"#BBB", "border-right":"0", "padding":"20px"},
       q4: {width:"50%", height: "50%","background":"#999", color:"#000"},
       global:{
-        ".navLink.active":{"background":"#999"},
+        ".navLink.active":{"background":"#999", "color": "#fff"},
         ".bar":{"display":"none !important"},
         ".prev": {"background":"#333"},
         ".next": {"background":"#333"},
@@ -162,13 +162,13 @@ export const StateItems: StateItem[] = [
   {
     id:"/colors/3",
     css:{
-      q1: {"background":"#4961A1", color: "#6F80B9"},
-      q2: {"background":"#9E9161", color: "#9C8E57"},
-      q3: {"background":"#928763"},
-      q4: {"background":"#DAC350", color: "#4c4e0f"},
+      q1: {"background":"#488e35", color: "#8ACD4A"},
+      q2: {"background":"#8ACD4A", color: "#488e35"},
+      q3: {"background":"#8ACD4A"},
+      q4: {"background":"#d7f3bc", color: "#4c4e0f"},
       global:{
-        ".navLink.active":{"background":"#DAC350"},
-        ".q4 ng-component ul li:before":{"color":"#848816"}
+        ".navLink.active":{"background":"#d7f3bc", "color": "#488e35"},
+        ".q4 ng-component ul li:before":{"color":"#8ACD4A"}
       }
     }
   },

@@ -256,7 +256,7 @@ export const PageItems: PageItem[] = [
       <li>Vyvážené použítí dokáže zdůraznit na určité prvky.</li>
     </ul>
     
-    <div class="container-fluid negative-margin"> 
+    <div class="container-fluid"> 
         <div class="row">        
           <div class="col-sm-12">
             <img class="example-img-lg" src="public/images/colors.png" />
@@ -272,7 +272,7 @@ export const PageItems: PageItem[] = [
     content:`
       <h2>Jak vybrat barevné kombinace</h2>
       <ul class="list-minified">
-        <li>Pozor na kobinace barev z opačného pólu spektra (viz nadpis)</li>
+        <li>Pozor na kombinace barev z opačného pólu spektra (viz nadpis)</li>
         <li>Barevné kobinace se řídí určitými pravidly</li>
         <li>Líbivá kombinace barev je čato jen matematickým vzorečkem</li>
         <li>Výběr barev na základě matematických pravidel nabízí např.<a href="http://paletton.com/" target="_blank">Paletton.com</a>:</li>
@@ -286,10 +286,11 @@ export const PageItems: PageItem[] = [
     content:`
       <h2>Barvoslepost</h2>
       <ul class="list-minified">
-        <li>Cca 8% mužské populace trpí určitým typem barvosleposti</li>
+        <li>Cca 9% mužské populace trpí určitým typem barvosleposti</li>
         <li>2% mužů zcela neodlišuje některé barvy</li>
-        <li>Takto vidí tuto prezentaci 1% mužů</li>
-      </ul>`
+        <li>Takto vidí tuto prezentaci 1% mužů (protanopia)</li>
+      </ul>
+      <img class="example-img-lg" src="public/images/colorblindness-test.png" />`
   },{
     id:3,
     name:"colors",  
@@ -297,11 +298,16 @@ export const PageItems: PageItem[] = [
     translation:"Barvy",
     content:`
       <h2>Barevná vyváženost</h2>
-      <ul class="list-minified">
-        <li>Cca 8% mužské populace trpí určitým typem barvosleposti</li>
-        <li>2% mužů zcela neodlišuje některé barvy</li>
-        <li>Takto vidí tuto prezentaci 1% mužů</li>
-      </ul>`
+      <div class="container-fluid negative-margin"> 
+        <div class="row">        
+          <div class="col-sm-6">
+            
+          </div>
+          <div class="col-sm-6">
+            
+          </div>
+        </div>
+      </div>`
   },{
     id:0,
     name:"usability",
