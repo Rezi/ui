@@ -158,7 +158,7 @@ export const PageItems: PageItem[] = [
     id:1,
     name:"layout",
     primary:false,
-    translation:"Layout - tisk",
+    translation:"Layout: tisk",
     content:`
       <ul>
         <li>
@@ -174,7 +174,7 @@ export const PageItems: PageItem[] = [
     id:2,
     name:"layout",
     primary:false,
-    translation:"Layout - digitální",
+    translation:"Layout: web",
     content:`
       <h2>Digitální éra</h2>
       <ul>       
@@ -187,7 +187,7 @@ export const PageItems: PageItem[] = [
     id:3,
     name:"layout",
     primary:false,
-    translation:"Layout - digitální",
+    translation:"Layout: web",
     content:`
       <h2>Grid</h2>
       <ul>
@@ -197,10 +197,10 @@ export const PageItems: PageItem[] = [
       </ul>
       <div class="container-fluid">   
         <div class="row">     
-          <div class="col-md-6 col-sm-8 example-col-200"><div>.col-md-6 .col-sm-8</div></div>
-          <div class="col-md-3 col-sm-4 example-col-100"><div>.col-md-3 .col-sm-4</div></div>
-          <div class="col-md-3 col-sm-4 example-col-100"><div>.col-md-3 .col-sm-4</div></div>
-          <div class="col-md-6 col-sm-12 example-col-100"><div>.col-md-6 .col-sm-12</div></div>
+          <div class="col-md-6 col-sm-8 example-col-150"><div>.col-md-6 .col-sm-8</div></div>
+          <div class="col-md-3 col-sm-4 example-col-75"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-3 col-sm-4 example-col-75"><div>.col-md-3 .col-sm-4</div></div>
+          <div class="col-md-6 col-sm-12 example-col-75"><div>.col-md-6 .col-sm-12</div></div>
         </div>
       </div>
       <ul>
@@ -298,13 +298,28 @@ export const PageItems: PageItem[] = [
     translation:"Barvy",
     content:`
       <h2>Barevná vyváženost</h2>
-      <div class="container-fluid negative-margin"> 
+      <div class="container-fluid"> 
         <div class="row">        
           <div class="col-sm-6">
-            
+            <h3>Dobře</h3>
+            <div class="button-wrap">
+              <span class="button-1" >Submit</span>
+            </div>
           </div>
           <div class="col-sm-6">
-            
+            <h3>Špatně</h3>
+              <div class="button-wrap button-wrap-1">
+                <span class="button-2" >Submit</span>
+              </div>
+              <p class="support-paragraph">Ztráta přehlednosti</p>
+              <div class="button-wrap">
+                <span class="button-3" >Submit</span>
+              </div>
+              <p class="support-paragraph">Malá výraznost</pl>
+              <div class="button-wrap">
+                <span class="button-4" >Submit</span>
+              </div>
+              <p class="support-paragraph">Nízký kontrast</p>
           </div>
         </div>
       </div>`
@@ -313,13 +328,118 @@ export const PageItems: PageItem[] = [
     name:"usability",
     primary:true,
     translation:"Použitelnost",
-    content:"<ul><li>usability 0</li></ul>"
+    content:`
+      <h2>Co je použitelnost</h2>
+      <ul class="list-minified">
+        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
+        <li>Je základem pro úspěšnou aplikaci v komerčním světě</li>
+      </ul>`
   },{
     id:1,
     name:"usability",
     primary:false,
-    translation:"Použitelnost",
-    content:"<ul><li>usability 1</li></ul>"
+    translation:"Použitelnost: testování",
+    content:`
+      <h2>Testování před samotným vývojem</h2>
+      <ul class="list-minified">
+        <li>Nejefektivnější testování probíhá ješe na wireframech</li>
+        <li>Uživatel je dotazován co se stane, když na něco klikne apod.</li>
+      </ul>
+      <h2>Testování během vývoje</h2>
+      <ul class="list-minified">
+        <li>Testy na reálné aplikaci děláme během vývoje</li>
+        <li>Náhodný uživatel (nikoli váš kamarád) dostane scénář a vy pozorujete jak se s ním vypořádá. Testovaný uživatel by měl přemýšlet nahlas</li>
+        <li>Náročnější testování: eye tracking </li>
+      </ul>`
+  },{
+    id:2,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: testování",
+    content:`
+      <h2>Testování na produkci: A/B</h2>
+      <ul class="list-minified">
+        <li>A/B testování (část uživatelů doste odlišný obsah)</li>
+        <li>Při dosažení stanoveného cíle se odešle informace o tom, kterou verzi uživatel použil</li>
+        <li>Testování pomocí jazykových variant?</li>
+      </ul>
+      <h2>Testování na produkci: Heat maps</h2>
+      <ul class="list-minified">
+        <li>Výpočetně náročné == pouze malý vzorek uživatelů</li>
+        <li>Zaznamenává pohyby myši</li>
+        <li>Ztrácí smysl s dominancí mobilních aplikací</li>
+      </ul>`
+  },{
+    id:3,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: testování",
+    content:`
+      <div class="container-fluid negative-margin">  
+        <div class="row">      
+          <div class="col-sm-6">
+            <h2>Heat map</h2>
+            <img class="example-img-lg " src="public/images/heatmap.png"/>
+          </div>
+          <div class="col-sm-6">
+            <h2>Eye tracking</h3>  
+            <img class="example-img-lg " src="public/images/eye.jpg"/>
+            <ul class="list-minified">
+              <li>Vyžaduje speciální hardware</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `
+  },{
+    id:4,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: animace",
+    content:`
+      <h2></h2>
+      <ul class="list-minified">
+        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
+        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
+      </ul>`
+  },{
+    id:5,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: příklady\u00A01",
+    content:`
+      <h2></h2>
+      <ul class="list-minified">
+        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
+        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
+      </ul>`
+  },{
+    id:6,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: příklady\u00A02",
+    content:`
+      <h2></h2>
+      <ul class="list-minified">
+        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
+        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
+      </ul>`
+  },{
+    id:7,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: příklady\u00A03",
+    content:`
+      <h2></h2>
+      <ul class="list-minified">
+        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
+        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
+      </ul>`
   },{
     id:0,
     name:"guidelines",

@@ -179,18 +179,79 @@ export const StateItems: StateItem[] = [
       q2: {},
       q3: {},
       q4: {},
-      global:{}
+      global:{
+        ".bar":{"display":"flex"}
+      }
     }
   },
-  {
+   {
     id:"/usability/1",
     css:{
       q1: {},
       q2: {},
       q3: {},
       q4: {},
+      global:{}
+    }
+  },
+   {
+    id:"/usability/2",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+   {
+    id:"/usability/3",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/usability/4",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/usability/5",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/usability/6",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/usability/7",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
       global:{
-        ".bar":{"display":"flex"},
         ".next.next-section:after": {"content":"'⇩ Guidelines'", "transform":"rotate(0)"},
       }
     }
