@@ -22,7 +22,10 @@ interface paginationControll {
   selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [StateService, PageService]
+  providers: [StateService, PageService],
+  host: {
+        '(document:keydown)': 'handleKeyboardEvents($event)'
+    }
 })
 
 export class AppComponent{
@@ -41,16 +44,76 @@ export class AppComponent{
   constructor(
     private stateService: StateService,
     private pageService: PageService,
-    router:Router
+    private router:Router
   ) {
 
     this.pageService = pageService;
 
-    router.events.subscribe((event) => {
+    this.router.events.subscribe((event) => {
       if(event instanceof NavigationStart) {
         this.getState(event.url);
       }
     });
+  }
+
+  scrollTo(element:any, to:number, duration:number) {
+    let start = element.scrollTop,
+        change = to - start,
+        increment = 20;
+
+    let animateScroll = (elapsedTime:number) => {        
+        elapsedTime += increment;
+        let position = this.easeInOut(elapsedTime, start, change, duration);                        
+        element.scrollTop = position; 
+        if (elapsedTime < duration) {
+            setTimeout(function() {
+                animateScroll(elapsedTime);
+            }, increment);
+        }
+    };
+
+    animateScroll(0);
+  }
+
+  easeInOut(currentTime:number, start:number, change:number, duration:number) {
+    currentTime /= duration / 2;
+    if (currentTime < 1) {
+        return change / 2 * currentTime * currentTime + start;
+    }
+    currentTime -= 1;
+    return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
+}
+
+  scrollBottom(){
+    var element = document.getElementsByTagName('ng-component')[0];
+    let scrollTo = element.scrollHeight - element.clientHeight;
+    this.scrollTo(element, scrollTo, 800);
+  }
+
+  scrollTop(){
+    var element = document.getElementsByTagName('ng-component')[0];
+    this.scrollTo(element, 0, 800);
+  }
+
+  handleKeyboardEvents(event: KeyboardEvent) {
+    let keyCode = event.which || event.keyCode;
+
+    if (keyCode === 37) {
+      // left arrow
+      this.router.navigate([this.paginationControl.prevLink]);         
+    }
+    else if (keyCode === 38) {
+      // right arrow
+      this.scrollTop();
+    }
+    else if (keyCode === 39) {
+      // right arrow
+      this.router.navigate([this.paginationControl.nextLink])
+    }
+    else if (keyCode === 40) {
+      // down arrow
+      this.scrollBottom();
+    }
   }
 
   //called on every route change/load

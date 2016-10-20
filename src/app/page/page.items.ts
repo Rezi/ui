@@ -273,7 +273,7 @@ export const PageItems: PageItem[] = [
       <h2>Jak vybrat barevné kombinace</h2>
       <ul class="list-minified">
         <li>Pozor na kombinace barev z opačného pólu spektra (viz nadpis)</li>
-        <li>Barevné kobinace se řídí určitými pravidly</li>
+        <li>Barevné kombinace se řídí určitými pravidly</li>
         <li>Líbivá kombinace barev je čato jen matematickým vzorečkem</li>
         <li>Výběr barev na základě matematických pravidel nabízí např.<a href="http://paletton.com/" target="_blank">Paletton.com</a>:</li>
       </ul>
@@ -286,7 +286,7 @@ export const PageItems: PageItem[] = [
     content:`
       <h2>Barvoslepost</h2>
       <ul class="list-minified">
-        <li>Cca 9% mužské populace trpí určitým typem barvosleposti</li>
+        <li>9% mužské populace trpí určitým typem barvosleposti</li>
         <li>2% mužů zcela neodlišuje některé barvy</li>
         <li>Takto vidí tuto prezentaci 1% mužů (protanopia)</li>
       </ul>
@@ -334,6 +334,7 @@ export const PageItems: PageItem[] = [
         <li>Použitelnost znamená snadné a intuitivní ovládání</li>
         <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
         <li>Je základem pro úspěšnou aplikaci v komerčním světě</li>
+        <li>Často rozhodují detaily (viz navigační lišta dole)</li>
       </ul>`
   },{
     id:1,
@@ -400,10 +401,12 @@ export const PageItems: PageItem[] = [
     content:`
       <h2></h2>
       <ul class="list-minified">
-        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
-        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
-        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
-      </ul>`
+        <li>Neměla by být použita jen pro efekt (jezdicí text, padající vločky)</li>
+        <li>Měla by:</li>
+        <li>A) vyprávět příběh <a href="http://www.apple.com/cz/mac-pro/">Mac book pro</a></li>
+        <li>B) zachovávat kontext</li>
+      </ul>
+      <img class="example-img-lg " src="public/images/animated.gif"/>`
   },{
     id:5,
     name:"usability",

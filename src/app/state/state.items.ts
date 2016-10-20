@@ -18,7 +18,8 @@ export const StateItems: StateItem[] = [
         ".prev:after": {"content":"'⇦'"},
          ".next.next-section:after": {"transform":"rotate(90deg)"},
          ".prev.prev-section:after": {"transform":"rotate(90deg)"},
-         ".q4 ng-component ul li:before":{"color":"#c8c8c8"}         
+         ".q4 ng-component ul li:before":{"color":"#c8c8c8"},         
+         "a":{"color":"#fff"}         
       }
     }
   },
@@ -168,7 +169,8 @@ export const StateItems: StateItem[] = [
       q4: {"background":"#d7f3bc", color: "#4c4e0f"},
       global:{
         ".navLink.active":{"background":"#d7f3bc", "color": "#488e35"},
-        ".q4 ng-component ul li:before":{"color":"#8ACD4A"}
+        ".q4 ng-component ul li:before":{"color":"#8ACD4A"},
+        "a":{"color":"#000"}
       }
     }
   },
