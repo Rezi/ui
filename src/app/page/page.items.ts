@@ -56,7 +56,7 @@ export const PageItems: PageItem[] = [
             <img class="example-img enlarge-animate" src="public/images/mindmap.png"/>
             <div class="list-wrapper">
               <ul class="fade-in">
-                <li>UX = User&nbsp;Experience</li>
+                <li><b>User&nbsp;Experience</b></li>
                 <li>Celkový uživatalský požitek z používáni služby či produktu</li>
                 <li>Úzce spojen s pojmem použitelnosti (usability)</li>
                 <li>Aplikace s dobrým UX by měla být ovladatelná prakticky kýmkoli a to bez použití manuálu.</li>
@@ -69,7 +69,7 @@ export const PageItems: PageItem[] = [
             <img class="example-img enlarge-animate" src="public/images/UI.jpg"/>
             <div class="list-wrapper">
               <ul class="fade-in">
-                <li>UI = User&nbsp;Interface = Uživatelské&nbsp;Rozhraní</li>
+                <li><b>User&nbsp;Interface = Uživatelské&nbsp;Rozhraní</b></li>
                 <li>Prostředí ve kterém dochází k interakci mezi uživatelem a počítačem</li>
                 <li>Jednotlivé obrazovky, funkční elementy (linky, tlačítka, ikonky)</li>
                 <li>I&nbsp;příkazová řádka je uživatelským rozhraním</li>
@@ -361,8 +361,8 @@ export const PageItems: PageItem[] = [
         <li>HTML tabindex</li>
         <li>Aria atributy, např.: role="button", aria-label="přidat do košíku"</li>
         <li>Přiměřený počet aktivních elementů na obrazovce</li>
-        <li>Řazení elementů podle priority</li>
-        <li>Řazení elementů podle priority</li>
+        <li>Optimalizace barev</li>
+        <li>Transkripce zvuku</li>
       </ul>
       <p class="inline-links">
         <a href="https://github.com/dequelabs/axe-core" target="_blank">"Axe core" testování přístupnosti</a>                                   
