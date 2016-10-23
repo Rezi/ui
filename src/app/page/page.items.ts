@@ -401,7 +401,7 @@ export const PageItems: PageItem[] = [
       <p class="inline-links">
         <a href="http://browserstack.com" target="_blank">browserstack.com</a>
         <a href="http://saucelabs.com" target="_blank">saucelabs.com</a>
-        <a href="xamarin.com" target="_blank">xamarin.com</a>                            
+        <a href="http://xamarin.com" target="_blank">xamarin.com</a>                            
       </p>`
   },{
     id:2,
