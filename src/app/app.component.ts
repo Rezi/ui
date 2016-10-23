@@ -34,6 +34,7 @@ export class AppComponent{
   page:PageItem;
   pagination:{}[];
   paginationControl:paginationControll;
+  zoomedIn = false;
 
 
   state:StateItem = {
@@ -113,6 +114,11 @@ export class AppComponent{
     else if (keyCode === 40) {
       // down arrow
       this.scrollBottom();
+    }
+    else if (keyCode === 90) {
+      // "z"" key
+      //to zoom in add zoom class to q4
+      this.zoomedIn = !this.zoomedIn;
     }
   }
 

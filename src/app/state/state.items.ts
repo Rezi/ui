@@ -19,7 +19,7 @@ export const StateItems: StateItem[] = [
          ".next.next-section:after": {"transform":"rotate(90deg)"},
          ".prev.prev-section:after": {"transform":"rotate(90deg)"},
          ".q4 ng-component ul li:before":{"color":"#c8c8c8"},         
-         "a":{"color":"#fff"}         
+         "a":{"color":"#fff"}     
       }
     }
   },
@@ -36,6 +36,16 @@ export const StateItems: StateItem[] = [
   {
     id:"/about/2",
     css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/about/3",
+    css:{
       q1: {"width":"0%", "height": "0%", "padding":"0px"},
       q2: {"width":"100%", "height": "0%", "padding":"0px"},
       q3: {"width":"0%", "height": "0%", "padding":"0px"},
@@ -44,7 +54,7 @@ export const StateItems: StateItem[] = [
     }
   },
   {
-    id:"/about/3",
+    id:"/about/4",
     css:{
       q1: {},
       q2: {},
@@ -54,7 +64,7 @@ export const StateItems: StateItem[] = [
     }
   },
   {
-    id:"/about/4",
+    id:"/about/5",
     css:{
       q1: {},
       q2: {},
@@ -186,6 +196,26 @@ export const StateItems: StateItem[] = [
       }
     }
   },
+  {
+    id:"/accessibility",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/accessibility/1",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}      
+    }
+  },
    {
     id:"/usability/1",
     css:{
@@ -254,10 +284,10 @@ export const StateItems: StateItem[] = [
       q3: {},
       q4: {},
       global:{
-        ".next.next-section:after": {"content":"'⇩ Guidelines'", "transform":"rotate(0)"},
+        ".next.next-section:after": {"content":"'⇨ Guidelines'", "transform":"rotate(0)"},
       }
     }
-  },
+  },  
   {
     id:"/guidelines",
     css:{
@@ -266,7 +296,7 @@ export const StateItems: StateItem[] = [
       q3: {},
       q4: {},
       global:{
-        ".prev.prev-section:after": {"content":"'⇧ Použitelnost'", "transform":"rotate(0)"}
+        ".prev.prev-section:after": {"content":"'⇦ Použitelnost'", "transform":"rotate(0)"}
       }
     }
   },

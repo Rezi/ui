@@ -78,6 +78,20 @@ my-app {
     top: 0.3rem;
 }
 
+/* Zoom q4 */
+
+.q4 {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+}
+
+.q4.zoomed {
+  
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* global page styles */
 
 a {
@@ -115,6 +129,10 @@ a {
     max-width: 100%;
 }
 
+.example-img-xl {
+    width: 100%;
+}
+
 .example-col-150 {
   height: 150px;
   display: flex;
@@ -137,6 +155,25 @@ a {
 .support-paragraph {
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+.inline-links a {
+  padding-right: 20px;
+}
+
+.compare-table{
+  width: 100%;
+}
+
+.compare-table .mid-cell{
+  width: 80px;
+  text-align: center;
+}
+
+.compare-table tr td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #488e35;
 }
 
 
@@ -200,6 +237,10 @@ a {
 
     .q2 {
       justify-content: center !important;
+    }
+
+    .q4 {
+      position: relative !important;
     }
 
     .example-img {

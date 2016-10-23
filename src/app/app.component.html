@@ -8,7 +8,7 @@
   <nav class="quadrant q3" [ngStyle]="state.css.q3">
 
   </nav>
-  <div class="quadrant q4" [ngStyle]="state.css.q4">
+  <div class="quadrant q4" [ngStyle]="state.css.q4" [class.zoomed]="zoomedIn">
       <router-outlet></router-outlet>
       <div class="controls" *ngIf="paginationControl">
         <a [routerLink]="paginationControl.prevLink" class="prev" [ngClass]="{'disabled': paginationControl.prevDisabled, 'prev-section':paginationControl.hasPrevSection}"></a>

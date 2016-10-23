@@ -37,13 +37,21 @@ const appRoutes: Routes = [
         component: PageComponent
       },
       {
+        path: 'accessibility',
+        component: PageComponent
+      },
+      {
+        path: 'accessibility/:id',
+        component: PageComponent
+      },
+      {
         path: 'usability',
         component: PageComponent
       },
       {
         path: 'usability/:id',
         component: PageComponent
-      },
+      },      
       {
         path: 'guidelines',
         component: PageComponent

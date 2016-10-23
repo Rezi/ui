@@ -5,7 +5,19 @@ export const PageItems: PageItem[] = [
     id:0,
     name:"about",
     primary:true,
-    translation:"O příručce",
+    translation:"Úvod",
+    content:`
+      <h2>Ovládání:</h2>
+      <ul>
+        <li>Šipky do stran = předešlý/další slide</li>
+        <li>Šipky nahoru/dolu = scrolování nahoru/dolu</li>
+        <li>Z = zoom</li>
+      </ul>`
+  },{
+    id:1,
+    name:"about",
+    primary:false,
+    translation:"Úvod",
     content:`
       <h2>Tato příručka:</h2>
       <ul>
@@ -13,7 +25,7 @@ export const PageItems: PageItem[] = [
         <li>Poukazuje na základní chyby při jejich implementaci</li>
       </ul>`
   },{
-    id:1,
+    id:2,
     name:"about",
     primary:false,
     translation:"UX vs UI",
@@ -32,7 +44,7 @@ export const PageItems: PageItem[] = [
       </div>
     `
   },{
-    id:2,
+    id:3,
     name:"about",
     primary:false,
     translation:"UX vs UI",
@@ -69,7 +81,7 @@ export const PageItems: PageItem[] = [
       </div>
     `
   },{
-    id:3,
+    id:4,
     name:"about",
     primary:false,
     translation:"UX vs UI",
@@ -126,7 +138,7 @@ export const PageItems: PageItem[] = [
       </div>
     `
   },{
-    id:4,
+    id:5,
     name:"about",
     primary:false,
     translation:"UX vs UI",
@@ -325,6 +337,38 @@ export const PageItems: PageItem[] = [
       </div>`
   },{
     id:0,
+    name:"accessibility",
+    primary:true,
+    translation:"Přístupnost",
+    content:`
+      <h2>15% populace má určitý handicap a nemůže:</h2>
+      <ul class="list-minified">
+        <li>Vidět obrazovku</li>
+        <li>Používat myš</li>
+        <li>Rozlišovat málo kontrastní text</li>
+        <li>Poslouchat hudbu/zvuky</li>
+        <li>Rozumět složitému textu</li>
+      </ul>`
+  },{
+    id:1,
+    name:"accessibility",
+    primary:false,
+    translation:"Přístupnost",
+    content:`
+      <h2>Řešení</h2>
+      <ul class="list-minified">
+        <li>Sémantické HTML</li>
+        <li>HTML tabindex</li>
+        <li>Aria atributy, např.: role="button", aria-label="přidat do košíku"</li>
+        <li>Přiměřený počet aktivních elementů na obrazovce</li>
+        <li>Řazení elementů podle priority</li>
+        <li>Řazení elementů podle priority</li>
+      </ul>
+      <p class="inline-links">
+        <a href="https://github.com/dequelabs/axe-core" target="_blank">"Axe core" testování přístupnosti</a>                                   
+      </p>`
+  },{
+    id:0,
     name:"usability",
     primary:true,
     translation:"Použitelnost",
@@ -352,7 +396,13 @@ export const PageItems: PageItem[] = [
         <li>Testy na reálné aplikaci děláme během vývoje</li>
         <li>Náhodný uživatel (nikoli váš kamarád) dostane scénář a vy pozorujete jak se s ním vypořádá. Testovaný uživatel by měl přemýšlet nahlas</li>
         <li>Náročnější testování: eye tracking </li>
-      </ul>`
+      </ul>
+      
+      <p class="inline-links">
+        <a href="http://browserstack.com" target="_blank">browserstack.com</a>
+        <a href="http://saucelabs.com" target="_blank">saucelabs.com</a>
+        <a href="xamarin.com" target="_blank">xamarin.com</a>                            
+      </p>`
   },{
     id:2,
     name:"usability",
@@ -389,7 +439,7 @@ export const PageItems: PageItem[] = [
             <ul class="list-minified">
               <li>Vyžaduje speciální hardware</li>
             </ul>
-          </div>
+          </div>        
         </div>
       </div>
     `
@@ -398,12 +448,11 @@ export const PageItems: PageItem[] = [
     name:"usability",
     primary:false,
     translation:"Použitelnost: animace",
-    content:`
-      <h2></h2>
+    content:`      
       <ul class="list-minified">
         <li>Neměla by být použita jen pro efekt (jezdicí text, padající vločky)</li>
         <li>Měla by:</li>
-        <li>A) vyprávět příběh <a href="http://www.apple.com/cz/mac-pro/">Mac book pro</a></li>
+        <li>A) vyprávět příběh <a href="http://www.apple.com/cz/mac-pro/">Mac pro</a></li>
         <li>B) zachovávat kontext</li>
       </ul>
       <img class="example-img-lg " src="public/images/animated.gif"/>`
@@ -413,36 +462,96 @@ export const PageItems: PageItem[] = [
     primary:false,
     translation:"Použitelnost: příklady\u00A01",
     content:`
-      <h2></h2>
-      <ul class="list-minified">
-        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
-        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
-        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
-      </ul>`
+      <table class="compare-table">
+        <tr>
+          <td>
+            <h3>Dobře</h3>
+          </td>
+          <td class="mid-cell"></td>
+          <td>
+            <h3>Špatně</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="example-img-xl " src="public/images/kosik-ok.png"/>
+          </td>
+          <td></td>
+          <td>
+            <img class="example-img-xl " src="public/images/kosik.png"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="example-img-xl " src="public/images/menu-ok.png"/>
+          </td>
+          <td></td>
+          <td>
+            <img class="example-img-xl " src="public/images/menu.png"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="example-img-xl " src="public/images/nav-better.png"/>
+          </td>
+          <td></td>
+          <td>
+            <img class="example-img-xl " src="public/images/nav1.png"/>
+          </td>
+        </tr>
+      </table>`
   },{
     id:6,
     name:"usability",
     primary:false,
     translation:"Použitelnost: příklady\u00A02",
     content:`
-      <h2></h2>
-      <ul class="list-minified">
-        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
-        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
-        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
-      </ul>`
+      <table class="compare-table">
+        <tr>
+          <td>
+            <h3>Dobře</h3>
+          </td>
+          <td class="mid-cell"></td>
+          <td>
+            <h3>Špatně</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="example-img-xl " src="public/images/roll-ok.png"/>
+          </td>
+          <td></td>
+          <td>
+            <img class="example-img-xl " src="public/images/roll.png"/>
+          </td>
+        </tr>        
+      </table>`
   },{
     id:7,
     name:"usability",
     primary:false,
     translation:"Použitelnost: příklady\u00A03",
     content:`
-      <h2></h2>
-      <ul class="list-minified">
-        <li>Použitelnost znamená snadné a intuitivní ovládání</li>
-        <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
-        <li>Je základem pro úspěšnou aplikaci v komerčním světě.</li>
-      </ul>`
+      <table class="compare-table">
+        <tr>
+          <td>
+            <h3>Špatně</h3>
+          </td>
+          <td class="mid-cell"></td>
+          <td>
+            <h3>Špatně</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="example-img-xl " src="public/images/tabs.png"/>
+          </td>
+          <td></td>
+          <td>
+            <img class="example-img-xl " src="public/images/form.png"/>
+          </td>
+        </tr>        
+      </table>`
   },{
     id:0,
     name:"guidelines",
