@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://localhost:63342/fp_client_local/_public/html_components/index.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="./guidelines_files/app.css">
+
+	<link rel="stylesheet" href="./guidelines_files/default.css">
+	<script type="text/javascript" src="./guidelines_files/highlight.pack.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+	<link href="./guidelines_files/css" rel="stylesheet" type="text/css">
+	<link href="./guidelines_files/css(1)" rel="stylesheet" type="text/css">
+
+	<style>
+
+		h1.components{
+			color:#000;
+			text-align: center;
+			text-transform: uppercase;
+
+			margin: 0;
+			padding: 30px;
+		}
+
+		h1.components.c_extensions{
+			background: #b5ff61;
+		}
+
+		.components_extensions{
+			background: #e9ffc8;
+			padding:0 0 40px 0;
+		}
+
+		h1.components.c_tips{
+			background: #fffd8c;
+		}
+
+		.components_tips{
+			background: #fffbdc;
+			padding:0 0 40px 0;
+		}
+
+		h1.components.c_modules{
+			background: #85d4ff;
+		}
+
+		.components_modules{
+			background: #ddf3ff;
+			padding:0 0 40px 0;
+		}
+
+		.components-coded-in{
+			display: inline-block;
+			background: #C9D6FF;
+			color: #0067A2;
+			margin-top: 10px;
+			padding: 5px;
+		}
+
+		.container{
+			background: #fff;
+			padding-bottom: 20px;
+		}
+
+		.components-with-arrow{
+			position: relative;
+			margin-bottom: 20px;
+			border-bottom: 1px solid red;
+		}
+
+
+		.components-with-arrow:after{
+			position: absolute;
+			content:" ";
+			height: 0;
+			width: 0;
+			left: 50%;
+			bottom: -30px;
+			border-style: solid;
+			border-color: red transparent transparent;
+			border-width: 15px;
+			margin-left: -15px;
+
+		}
+
+		.components-square-wrap{
+			position: relative;
+			width: 0;
+			height: 0;
+			padding: 50%;
+			margin-bottom: 10px;
+		}
+
+		.components-square{
+			position: absolute;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.components-square-in{
+			padding: 5px;
+			background-color: indianred;
+			height: 100%;
+			width: 100%;
+		}
+
+
+
+		h2.components, h4.components{
+			color:#000;
+		}
+
+		hr.components{
+			background: #dfdfdf;
+			height:50px;
+			margin: 0;
+			border:0;
+		}
+	</style>
+</head>
+<body>
+
+<div class="components_extensions">
+
+	<h1 class="components c_extensions">Bootstrap extensions</h1>
+
+	<div class="container">
+		<div class="components-coded-in">_bootstrap_class_extensions.less</div>
+		<h2 class="components">Vertical alignment (centering) of columns</h2>
+
+
+			<p>Use <code>.vcenter-container</code> for a <code>.row</code> element and <code>.vcenter</code> for column element such as <code>.col-md-5</code> in order to vertically align cols content</p>
+			<p>Beware that due to inline-blocks "gap" fix, columns has font size set to 14px by default (check the CSS to see why ;) )</p>
+
+
+
+
+
+		<header class="row vcenter-container">
+			<div class="col-sm-2 vcenter text-center">
+				<img src="guidelines_files/120x120.png" alt="..." class="img-circle">
+			</div>
+
+			<nav class="col-sm-8 vcenter">
+				ddd
+			</nav>
+
+			<div class="col-sm-2 vcenter text-center">
+				<img src="guidelines_files/50x50.png" alt="..." class="img-circle">
+				<img src="guidelines_files/50x50.png" alt="..." class="img-circle">
+			</div>
+		</header>
+
+
+
+
+		<pre><code class="html hljs ">
+	<span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row vcenter-container"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2 vcenter text-center"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://placehold.it/120x120"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"..."</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-circle"</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-8 vcenter"</span>&gt;</span>
+			ddd
+		<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2 vcenter text-center"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://placehold.it/50x50"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"..."</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-circle"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://placehold.it/50x50"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"..."</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-circle"</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+		</code></pre>
+
+	</div>
+	<hr class="components">
+	<div class="container">
+		<div class="components-coded-in">_bootstrap_class_extensions.less</div>
+		<h2 class="components">Full height for columns</h2>
+
+
+		<p>Use <code>.full-height-cell-container</code> for a <code>.row</code> element and <code>.full-height-cell</code> for column element such as <code>.col-md-5</code> in order to set all coimns to 100% height. This is done by displaying rows as tables with real cells. Hence the responsiveness of the grid wont work.</p>
+
+
+		<div class="row full-height-cell-container parent-color-blog">
+			<div class="col-xs-7 full-height-cell bg-c-full">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor lacus, sollicitudin sit amet nibh nec, auctor egestas dui. Donec congue eros auctor dignissim sollicitudin. Etiam facilisis ante id mauris aliquam lacinia et vitae tellus. Pellentesque consectetur mauris id dolor tempor dictum. Nullam id dui turpis. Sed justo nisi, interdum sit amet adipiscing ac, viverra non nulla. Vestibulum aliquet viverra lectus.
+			</div>
+			<div class="col-xs-5 full-height-cell bg-c-light">
+				Vestibulum aliquet viverra lectus.
+			</div>
+		</div>
+
+		<br>
+
+		<pre><code class="html hljs ">
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row full-height-cell-container parent-color-blog"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-7 full-height-cell bg-c-full"</span>&gt;</span>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor lacus, sollicitudin sit amet nibh nec, auctor egestas dui. Donec congue eros auctor dignissim sollicitudin. Etiam facilisis ante id mauris aliquam lacinia et vitae tellus. Pellentesque consectetur mauris id dolor tempor dictum. Nullam id dui turpis. Sed justo nisi, interdum sit amet adipiscing ac, viverra non nulla. Vestibulum aliquet viverra lectus.
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-5 full-height-cell bg-c-light"</span>&gt;</span>
+			Vestibulum aliquet viverra lectus.
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		</code></pre>
+
+
+	</div>
+
+
+
+</div>
+
+<div class="components_tips">
+
+	<h1 class="components c_tips">CSS Tips and Tricks</h1>
+
+	<div class="container">
+		<div class="components-coded-in">no file</div>
+		<h2 class="components">Triange stuff</h2>
+
+
+		<p>There is a cool way to create a triangle with only css, or even add a triangle after an element by CSS after</p>
+
+
+
+
+
+		<div class="components-with-arrow"></div>
+
+
+
+
+
+
+		<pre><code class="html hljs ">
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>&gt;</span><span class="css">
+	<span class="hljs-class">.components-with-arrow</span><span class="hljs-rules">{
+		<span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">20</span>px</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">border-bottom</span>:<span class="hljs-value"> <span class="hljs-number">1</span>px solid red</span></span>;
+	<span class="hljs-rule">}</span></span>
+
+
+	<span class="hljs-class">.components-with-arrow</span><span class="hljs-pseudo">:after</span><span class="hljs-rules">{
+		<span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"><span class="hljs-string">" "</span></span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">50</span>%</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> -<span class="hljs-number">30</span>px</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> red transparent transparent</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">15</span>px</span></span>;
+		<span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> -<span class="hljs-number">15</span>px</span></span>;
+	<span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-with-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		</code></pre>
+
+	</div>
+	<hr class="components">
+	<div class="container">
+		<div class="components-coded-in">no file</div>
+		<h2 class="components">Responsive rectangles maintaining aspect ratio</h2>
+
+
+		<p>Nice technique for creation of rectangles with width in percents, maintaining its height related to ist width in give ratio</p>
+
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="components-square-wrap">
+					<div class="components-square">
+						<div class="components-square-in"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<br>
+
+		<pre><code class="html hljs ">
+	<span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>&gt;</span><span class="css">
+		<span class="hljs-class">.components-square-wrap</span><span class="hljs-rules">{
+			<span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">50</span>%</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">10</span>px</span></span>;
+		<span class="hljs-rule">}</span></span>
+
+		<span class="hljs-class">.components-square</span><span class="hljs-rules">{
+			<span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"><span class="hljs-number">0</span></span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+		<span class="hljs-rule">}</span></span>
+
+		<span class="hljs-class">.components-square-in</span><span class="hljs-rules">{
+			<span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">5</span>px</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> indianred</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100</span>%</span></span>;
+			<span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100</span>%</span></span>;
+		<span class="hljs-rule">}</span></span>
+	</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-2"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-wrap"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"components-square-in"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		</code></pre>
+
+
+	</div>
+
+
+
+</div>
+
+<div class="components_modules">
+	<h1 class="components c_modules">Bootstrap modules</h1>
+
+	<div class="container">
+
+		<h2 class="components">Grid show</h2>
+
+
+
+		<div class="row">
+			<div class="col-sm-7 bg-info"><h4 class="components">7 cols</h4></div>
+			<div class="col-sm-5 bg-success"><h4 class="components">5 cols</h4></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-7 bg-primary">
+				nested 12columns grid in a 7 cols grid
+				<div class="row">
+					<div class="col-md-7 bg-warning"><h4 class="components">7 cols</h4></div>
+					<div class="col-md-3 bg-success"><h4 class="components">3 cols</h4></div>
+					<div class="col-md-2 bg-danger"><h4 class="components">2 cols</h4></div>
+				</div>
+			</div>
+			<div class="col-sm-5 bg-warning"><h4 class="components">5 cols</h4></div>
+		</div>
+	</div>
+
+	<hr class="components">
+
+	<div class="container">
+		<div class="components-coded-in">_layout.less</div>
+		<h2 class="components">Gray background with stripes</h2>
+
+
+
+		<div class="row container-with-gray-stripes">
+			<div class="col-sm-12">
+				<h1>Some random text</h1>
+			</div>
+		</div>
+
+		<br>
+
+		<pre><code class="html hljs ">
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row container-with-gray-stripes"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-12"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Some random text<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		</code></pre>
+	</div>
+
+	<hr class="components">
+
+	<div class="container">
+		<div class="components-coded-in">_layout.less</div>
+		<h2 class="components">Element with arrow down</h2>
+
+
+
+		<div class="element-with-arrow">
+			Some random text
+		</div>
+
+
+
+		<br>
+
+		<pre><code class="html hljs ">
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"element-with-arrow"</span>&gt;</span>
+		Some random text
+	<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		</code></pre>
+	</div>
+
+	<hr class="components">
+
+	<div class="container">
+	<div class="components-coded-in">_general_elements.less</div>
+	<h2 class="components">Basic button</h2>
+
+	<p>This class does not work if included as mixin (it has hover effects etc.) add this class to your own specific class with width and additional info, if needed.</p>
+
+	<div class="basic-button">asd</div>
+
+    <br>
+
+    <h2 class="components">Social media button</h2>
+
+    <div class="social-media-button">login with facebook</div>
+
+    <br>
+
+    <h2 class="components">Rounded input and button</h2>
+
+    <div class="rounded-button">something</div>
+
+    <br>
+
+    <input class="rounded-input" placeholder="something">
+
+    <br><br>
+
+    <pre><code class="html hljs ">
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"basic-button"</span>&gt;</span>asd<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"social-media-button"</span>&gt;</span>login with facebook<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded-button"</span>&gt;</span>something<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    </code></pre>
+</div>
+
+
+
+	<hr class="components">
+
+	<div class="container">
+		<div class="components-coded-in">_tabs.less</div>
+		<h2 class="components">Tab bar</h2>
+
+
+        <div class="row tabs-bar" ng-class="{&#39;tabs-bar-without-gap&#39;:noGap}">
+
+            <a ng-href="{{tab.link}}" ng-repeat="tab in tabs" ng-click="activateTab(tab,$event)" ng-class="{&#39;active-tab&#39;: tab.active}" class="col-xs-12 col-sm-6 col-md-4 col-lg-2 active-tab unselectable tab-col">
+                <div class="tab">Recipes</div>
+            </a>
+
+            <a ng-href="{{tab.link}}" ng-repeat="tab in tabs" ng-click="activateTab(tab,$event)" ng-class="{&#39;active-tab&#39;: tab.active}" class="col-xs-12 col-sm-6 col-md-4 col-lg-2 unselectable tab-col">
+                <div class="tab">Collection</div>
+            </a>
+
+            <a ng-href="{{tab.link}}" ng-repeat="tab in tabs" ng-click="activateTab(tab,$event)" ng-class="{&#39;active-tab&#39;: tab.active}" class="col-xs-12 col-sm-6 col-md-4 col-lg-2 unselectable tab-col">
+                <div class="tab">Article</div>
+            </a>
+
+        </div>
+
+		<br>
+
+		<pre><code class="html hljs ">
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row tabs-bar"</span> <span class="hljs-attribute">ng-class</span>=<span class="hljs-value">"{'tabs-bar-without-gap':noGap}"</span>&gt;</span>
+            
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">ng-href</span>=<span class="hljs-value">"{{tab.link}}"</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"tab in tabs"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"activateTab(tab,$event)"</span> <span class="hljs-attribute">ng-class</span>=<span class="hljs-value">"{'active-tab': tab.active}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12 col-sm-6 col-md-4 col-lg-2 active-tab unselectable tab-col"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab"</span>&gt;</span>Recipes<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">ng-href</span>=<span class="hljs-value">"{{tab.link}}"</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"tab in tabs"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"activateTab(tab,$event)"</span> <span class="hljs-attribute">ng-class</span>=<span class="hljs-value">"{'active-tab': tab.active}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12 col-sm-6 col-md-4 col-lg-2 unselectable tab-col"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab"</span>&gt;</span>Collection<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">ng-href</span>=<span class="hljs-value">"{{tab.link}}"</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"tab in tabs"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"activateTab(tab,$event)"</span> <span class="hljs-attribute">ng-class</span>=<span class="hljs-value">"{'active-tab': tab.active}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12 col-sm-6 col-md-4 col-lg-2 unselectable tab-col"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab"</span>&gt;</span>Article<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+		</code></pre>
+	</div>
+
+
+
+<!-- tags -->
+
+<hr class="components">
+<div class="container">
+    <div class="components-coded-in">_tags.less</div>
+
+    <!-- tags wrap -->
+
+	<div class="element-with-arrow"></div>
+
+	<div class="not-implemented"><div class="tbd-text">So far this is only a static HTML</div></div>
+	<div class="tags-wrap container-with-gray-stripes">
+
+
+
+		<div class="container-padded">
+
+			<!-- tags content -->
+
+			<h3 class="tag-header">tags</h3>
+			<div class="tags-content">
+				<div class="tag-button">mexican</div>
+				<div class="tag-button">lunch</div>
+				<div class="tag-button">quick and easy</div>
+				<div class="tag-button">healthy</div>
+				<div class="tag-button">vegetarian</div>
+				<div class="tag-button">spicy</div>
+			</div>
+
+			<!-- taste content -->
+
+			<h3 class="taste-header">taste</h3>
+			<div class="taste-text">
+				sweet, salty, spicy
+			</div>
+		</div>
+	</div>
+
+
+	<br>
+    <br>
+
+<pre><code class="html hljs ">
+
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"element-with-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"not-implemented"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tbd-text"</span>&gt;</span>So far this is only a static HTML<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tags-wrap container-with-gray-stripes"</span>&gt;</span>
+
+
+
+		<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container-padded"</span>&gt;</span>
+
+			<span class="hljs-comment">&lt;!-- tags content --&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-header"</span>&gt;</span>tags<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tags-content"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>mexican<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>lunch<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>quick and easy<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>healthy<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>vegetarian<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-button"</span>&gt;</span>spicy<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+			<span class="hljs-comment">&lt;!-- taste content --&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"taste-header"</span>&gt;</span>taste<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"taste-text"</span>&gt;</span>
+				sweet, salty, spicy
+			<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+
+</code></pre>
+
+</div>
+
+
+<!-- floating circles -->
+
+<hr class="components">
+<div class="container">
+    <div class="components-coded-in">_floating_circles.less</div>
+
+    <div class="container-padded">
+
+        <div class="floating-circles">
+
+            <div class="circle first"></div>
+            <div class="circle second"></div>
+            <div class="circle third"></div>
+            <div class="circle fourth"></div>
+            <div class="circle fifth"></div>
+            <div class="circle sixth"></div>
+            <div class="circle seventh"></div>
+            <div class="circle eighth"></div>
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <pre><code class=" hljs http">
+
+<span class="xml">        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"floating-circles"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle first"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle second"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle third"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle fourth"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle fifth"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle sixth"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle seventh"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle eighth"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    </span></code></pre>
+
+</div>
+</div>
+
+
+
+</body></html>

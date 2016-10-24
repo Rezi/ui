@@ -9,9 +9,9 @@ export const PageItems: PageItem[] = [
     content:`
       <h2>Ovládání:</h2>
       <ul>
-        <li>Šipky do stran = předešlý/další slide</li>
-        <li>Šipky nahoru/dolu = scrolování nahoru/dolu</li>
-        <li>Z = zoom</li>
+        <li>Klávesy (⇦/⇨) = předešlý/další slide</li>
+        <li>Klávesy (⇑/⇓) = scrolování nahoru/dolu</li>
+        <li>z = zoom</li>
       </ul>`
   },{
     id:1,
@@ -556,12 +556,29 @@ export const PageItems: PageItem[] = [
     name:"guidelines",
     primary:true,
     translation:"Guidelines",
-    content:"<ul><li>guidelines 0</li></ul>"
+    content:`
+      <h2>Styleguides</h2>
+      <ul class="list-minified">
+        <li>Mají zaručit standard v kódování (.editorconfig)</li>
+        <li>Zavádějí jmenné konvence</li>
+        <li>Pomáhají vytvářet udržitelný projekt</li>
+        <li>Usnadňují zapracování nových zaměstnanců</li>
+      </ul>`
   },{
     id:1,
     name:"guidelines",
     primary:false,
     translation:"Guidelines",
-    content:"<ul><li>guidelines 1</li></ul>"
+    content:`
+      <h2>UI Guidelines</h2>
+      <ul class="list-minified">
+        <li>Udávají pravidla pro design / layout / navigaci</li>
+        <li>Jsou přehledem UI komponentů použitých na projektu</li>
+        <li>Pomáhají předcházet kolizím v CSS </li>
+        <li>Např.: Material design, iOS guidelines, bootstrap </li>
+      </ul>
+      <p class="inline-links">
+        <a href="/public/guidelines.html" target="_blank">UI guidelines Example</a>
+      </p>`
   }
 ];
