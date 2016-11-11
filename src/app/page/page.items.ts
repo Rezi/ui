@@ -10,7 +10,7 @@ export const PageItems: PageItem[] = [
       <h2>Ovládání:</h2>
       <ul>
         <li>Klávesy (⇦/⇨) = předešlý/další slide</li>
-        <li>Klávesy (⇑/⇓) = scrolování nahoru/dolu</li>
+        <li>Klávesy (⇧/⇩) = scrolování nahoru/dolu</li>
         <li>z = zoom</li>
       </ul>`
   },{
@@ -264,8 +264,8 @@ export const PageItems: PageItem[] = [
     <ul>
       <li>Barvy v designu vyjadřují emoce, dávají charakter a zdůrazňují</li>
       <li>Plný význam, ale dostávají barvy až v kombinaci</li>
-      <li>Přesycenost barvami (jako v tomto případě) může vyvolávat chaos.</li>
-      <li>Vyvážené použítí dokáže zdůraznit na určité prvky.</li>
+      <li>Přesycenost barvami (jako v tomto případě) může vyvolávat chaos</li>
+      <li>Vyvážené použítí dokáže zdůraznit určité prvky</li>
     </ul>
     
     <div class="container-fluid"> 
@@ -376,6 +376,7 @@ export const PageItems: PageItem[] = [
       <h2>Co je použitelnost</h2>
       <ul class="list-minified">
         <li>Použitelnost znamená snadné a intuitivní ovládání</li>
+        <li>Schopost dostat se k cíli na co nejméně akcí (kliků, stisků kláves)</li>
         <li>Měla by vycházet z reálých dat o používání, z testování použitelnosti a vyhodnocování tzv. "Conversion funnels"</li>
         <li>Je základem pro úspěšnou aplikaci v komerčním světě</li>
         <li>Často rozhodují detaily (viz navigační lišta dole)</li>
@@ -388,7 +389,7 @@ export const PageItems: PageItem[] = [
     content:`
       <h2>Testování před samotným vývojem</h2>
       <ul class="list-minified">
-        <li>Nejefektivnější testování probíhá ješe na wireframech</li>
+        <li>Nejefektivnější testování probíhá ještě na wireframech</li>
         <li>Uživatel je dotazován co se stane, když na něco klikne apod.</li>
       </ul>
       <h2>Testování během vývoje</h2>

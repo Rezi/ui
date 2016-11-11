@@ -8,9 +8,9 @@ export const StateItems: StateItem[] = [
       q1: {width:"50%", height: "50%","background":"#FFF", "border-right":"0", "border-bottom":"0", color:"#999", "padding":"20px"},
       q2: {width:"50%", height: "50%","background":"#DDD", "border-bottom":"0", color:"#000", "justify-content":"center", "padding":"20px", "padding-left":"20px"},
       q3: {width:"50%", height: "50%","background":"#BBB", "border-right":"0", "padding":"20px"},
-      q4: {width:"50%", height: "50%","background":"#999", color:"#000"},
+      q4: {width:"50%", height: "50%","background":"#aaa", color:"#000"},
       global:{
-        ".navLink.active":{"background":"#999", "color": "#fff"},
+        ".navLink.active":{"background":"#aaa", "color": "#fff"},
         ".bar":{"display":"none !important"},
         ".prev": {"background":"#333"},
         ".next": {"background":"#333"},
