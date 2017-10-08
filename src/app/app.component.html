@@ -1,3 +1,6 @@
+<div class="time" (dblclick)="resetCountDown()">
+  {{ timeToShow }}
+</div>
 <div class="quadrants">
   <div class="quadrant q1" [ngStyle]="state.css.q1">
     <span [innerHTML]="logo" class="logo"></span>

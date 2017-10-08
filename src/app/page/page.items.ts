@@ -33,12 +33,14 @@ export const PageItems: PageItem[] = [
       <div class="container-fluid negative-margin">  
         <div class="row">      
           <div class="col-sm-6">
-            <h3>UX</h3>
-            <img class="example-img" src="public/images/mindmap.png"/>
+            <img class="example-img" src="public/images/ux.gif"/>
+            <div>
+              <br>
+              <img class="example-img" src="public/images/text-placeholder.png"/>
+            </div>
           </div>
           <div class="col-sm-6">
-            <h3>UI</h3>  
-            <img class="example-img" src="public/images/UI.jpg"/>
+            <img class="example-img" src="public/images/ui.png"/>
           </div>
         </div>
       </div>
@@ -52,35 +54,38 @@ export const PageItems: PageItem[] = [
       <div class="container-fluid negative-margin">  
         <div class="row">       
           <div class="col-sm-6">
-            <h1>UX</h1>
-            <img class="example-img enlarge-animate" src="public/images/mindmap.png"/>
-            <div class="list-wrapper">
+            <img class="example-img enlarge-animate" src="public/images/ux.gif"/>
+
+            <div class="list-wrapper relative">
+              <div class="absolute fade-out">
+                <br>
+                <img class="example-img" src="public/images/text-placeholder.png"/>
+              </div>
+              <h2>User&nbsp;Experience</h2>
               <ul class="fade-in">
-                <li><b>User&nbsp;Experience</b></li>
                 <li>Celkový uživatalský požitek z používáni služby či produktu</li>
-                <li>Úzce spojen s pojmem použitelnosti (usability)</li>
-                <li>Aplikace s dobrým UX by měla být ovladatelná prakticky kýmkoli a to bez použití manuálu.</li>
+                <li>Zahrnuje <b>Interaction design</b>, <b>Information achitecture</b> i <b>UI</b></li>
+                <li>Aplikace s dobrým UX by měla být ovladatelná i bez použití manuálu.</li>
                 <li>UX staví na předešlých zkušenostech uživatele</li>
               </ul>
             </div>
           </div>
           <div class="col-sm-6">
-            <h1>UI</h1>  
-            <img class="example-img enlarge-animate" src="public/images/UI.jpg"/>
+            <img class="example-img enlarge-animate" src="public/images/ui.png"/>
+            
             <div class="list-wrapper">
               <ul class="fade-in">
-                <li><b>User&nbsp;Interface = Uživatelské&nbsp;Rozhraní</b></li>
+              <h2>User&nbsp;Interface</h2>
                 <li>Prostředí ve kterém dochází k interakci mezi uživatelem a počítačem</li>
                 <li>Jednotlivé obrazovky, funkční elementy (linky, tlačítka, ikonky)</li>
                 <li>I&nbsp;příkazová řádka je uživatelským rozhraním</li>
-                <li>Podstatou UI není otevřenost masám</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     `
-  },{
+  },/*{
     id:4,
     name:"about",
     primary:false,
@@ -137,8 +142,8 @@ export const PageItems: PageItem[] = [
         </div>
       </div>
     `
-  },{
-    id:5,
+  },*/{
+    id:4,
     name:"about",
     primary:false,
     translation:"UX vs UI",
@@ -146,11 +151,10 @@ export const PageItems: PageItem[] = [
       <div class="container-fluid negative-margin"> 
         <div class="row">        
           <div class="col-sm-12">
-            <h1 class="text-center">Co zahrnuje UX</h1>  
-            <span class="block-centered-600">
-              <img class="full-img" src="public/images/UI-in-UX.png"/>
-              <p class="text-right"><a href="http://www.odannyboy.com/" target="_blank">Obrázek: Dan Saffer</a></p>
-            <span>
+            <div class="centered">
+              <h1 class="text-center">Kečup není UX ani UI</h1>  
+              <img class="full-img" src="public/images/ui_ux.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -161,7 +165,6 @@ export const PageItems: PageItem[] = [
     primary:true,
     translation:"Layout",
     content:`
-      <h2>Co je to layout?</h2>
       <ul>
         <li>Layout = rozvržení a uspořádání informací</li>
         <li>Proč není toto uspořádání optimální?</li>
@@ -173,14 +176,9 @@ export const PageItems: PageItem[] = [
     translation:"Layout: tisk",
     content:`
       <ul>
-        <li>
-          Zlatý řez (zlatá spirála) 1.618 == matematika
-          <br><br>
-          <img class="example-img" src="public/images/spiral.jpg" />
-        </li>
+        <li>Zlatý řez (zlatá spirála) 1.618 == matematika</li>
         <li>Fibonaceho řada 1,2,3,5,8,13 (8:13)</li>
-        <li>Pravidla třetin</li>
-        <li>Fixní grid</li>
+        <li>Pravidla třetin (fotografie)</li>
       </ul>`
   },{
     id:2,
@@ -189,12 +187,15 @@ export const PageItems: PageItem[] = [
     translation:"Layout: web",
     content:`
       <h2>Digitální éra</h2>
+      
       <ul>       
         <li>Flexibilita vs Kompaktnost</li>
         <li>Maximální požadavky na responsivnost</li>
          <li>Starý fixní grid nahrazen novým flexibilním (virtuálním)</li>
          <li>Grid - 12 nebo 13 sloupců</li>
-      </ul>`
+      </ul>
+      <img class="example-img-xl" src="public/images/content-water.png" />
+      `
   },{
     id:3,
     name:"layout",
@@ -214,30 +215,14 @@ export const PageItems: PageItem[] = [
           <div class="col-md-3 col-sm-4 example-col-75"><div>.col-md-3 .col-sm-4</div></div>
           <div class="col-md-6 col-sm-12 example-col-75"><div>.col-md-6 .col-sm-12</div></div>
         </div>
-      </div>
-      <ul>
-        <li>Mezi oblíbené knihovny obsahující Grid systémy patří např.:<br>
-          <b>960 Grid, Zurb Foundation, Skeleton, Susy</b> a mnoho dalších
-        </li>
-      </ul>`
+      </div>`
   },{
     id:4,
     name:"layout",
     primary:false,
     translation:"Layout",
     content:`
-      <h2>Co přetrvává</h2>
-      <ul>
-        <li>Práce s prázdným prostorem</li>
-        <li>Práce s odsazením</li>
-      </ul>
-      <img class="example-img-lg" src="public/images/pixel-ad.png" />`
-  },{
-    id:5,
-    name:"layout",
-    primary:false,
-    translation:"Layout a design",
-    content:`
+
       <h2>Základní pravidla designu - Dieter Rams</h2>
       <ul class="list-minified">
         <li>Jednoduché je lepší než komplikované.</li>
@@ -254,32 +239,72 @@ export const PageItems: PageItem[] = [
         <li>Samozřejmé je lepší než, to co je zapotřebí hledat.</li>
         <li>Málo prvků je lepší než mnoho.</li>
         <li>Systém je lepší než jednotlivé prvky.</li>
-      </ul>`
+      </ul>
+      `
+  },{
+    id:5,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT 2001</h2>
+      <img class="example-img-xl" src="public/images/nyt01.jpg" />
+    </div>`
+  },{
+    id:6,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT 2004</h2>
+      <img class="example-img-xl" src="public/images/nyt04.jpg" />
+    </div>`
+  },{
+    id:7,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT 2007</h2>
+      <img class="example-img-xl" src="public/images/nyt07.jpg" />
+    </div>`
+  },{
+    id:8,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT 2014</h2>
+      <img class="example-img-xl" src="public/images/nyt14.jpg" />
+    </div>`
+  },{
+    id:9,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT Proposal</h2>
+      <img class="example-img-xl" src="public/images/nyt-proposal.png" />
+    </div>`
+  },{
+    id:10,
+    name:"layout",
+    primary:false,
+    translation:"Layout a design",
+    content:`
+    <div class="container-fluid negative-margin"> 
+      <h2>Příklady: NYT 2017</h2>
+      <img class="example-img-xl" src="public/images/nyt17.png" />
+    </div>`
   },{
     id:0,
-    name:"colors",
-    primary:true,
-    translation:"Barvy",
-    content:`
-    <ul>
-      <li>Barvy v designu vyjadřují emoce, dávají charakter a zdůrazňují</li>
-      <li>Plný význam, ale dostávají barvy až v kombinaci</li>
-      <li>Přesycenost barvami (jako v tomto případě) může vyvolávat chaos</li>
-      <li>Vyvážené použítí dokáže zdůraznit určité prvky</li>
-    </ul>
-    
-    <div class="container-fluid"> 
-        <div class="row">        
-          <div class="col-sm-12">
-            <img class="example-img-lg" src="public/images/colors.png" />
-            <p class="text-right"><a href="http://www.huffingtonpost.com/brian-honigman/psychology-color-design-infographic_b_2516608.html" target="_blank">Obrázek: the Huffington Post</a></p>
-          </div>
-        </div>
-      </div>`
-  },{
-    id:1,
     name:"colors",  
-    primary:false,  
+    primary:true,  
     translation:"Barvy",
     content:`
       <h2>Jak vybrat barevné kombinace</h2>
@@ -291,7 +316,7 @@ export const PageItems: PageItem[] = [
       </ul>
       <img class="example-img-lg" src="public/images/color-picker.png" />`
   },{
-    id:2,
+    id:1,
     name:"colors",  
     primary:false,  
     translation:"Barvy",
@@ -304,7 +329,7 @@ export const PageItems: PageItem[] = [
       </ul>
       <img class="example-img-lg" src="public/images/colorblindness-test.png" />`
   },{
-    id:3,
+    id:2,
     name:"colors",  
     primary:false,  
     translation:"Barvy",
@@ -392,7 +417,14 @@ export const PageItems: PageItem[] = [
         <li>Nejefektivnější testování probíhá ještě na wireframech</li>
         <li>Uživatel je dotazován co se stane, když na něco klikne apod.</li>
       </ul>
-      <h2>Testování během vývoje</h2>
+      `
+  },{
+    id:2,
+    name:"usability",
+    primary:false,
+    translation:"Použitelnost: testování",
+    content:`
+    <h2>Testování během vývoje</h2>
       <ul class="list-minified">
         <li>Testy na reálné aplikaci děláme během vývoje</li>
         <li>Náhodný uživatel (nikoli váš kamarád) dostane scénář a vy pozorujete jak se s ním vypořádá. Testovaný uživatel by měl přemýšlet nahlas</li>
@@ -402,9 +434,10 @@ export const PageItems: PageItem[] = [
       <p class="inline-links">
         <a href="http://browserstack.com" target="_blank">browserstack.com</a>
         <a href="http://saucelabs.com" target="_blank">saucelabs.com</a>
-      </p>`
+      </p>
+      `
   },{
-    id:2,
+    id:3,
     name:"usability",
     primary:false,
     translation:"Použitelnost: testování",
@@ -415,33 +448,6 @@ export const PageItems: PageItem[] = [
         <li>Při dosažení stanoveného cíle se odešle informace o tom, kterou verzi uživatel použil</li>
         <li>Testování pomocí jazykových variant?</li>
       </ul>
-      <h2>Testování na produkci: Heat maps</h2>
-      <ul class="list-minified">
-        <li>Výpočetně náročné == pouze malý vzorek uživatelů</li>
-        <li>Zaznamenává pohyby myši</li>
-        <li>Ztrácí smysl s dominancí mobilních aplikací</li>
-      </ul>`
-  },{
-    id:3,
-    name:"usability",
-    primary:false,
-    translation:"Použitelnost: testování",
-    content:`
-      <div class="container-fluid negative-margin">  
-        <div class="row">      
-          <div class="col-sm-6">
-            <h2>Heat map</h2>
-            <img class="example-img-lg " src="public/images/heatmap.png"/>
-          </div>
-          <div class="col-sm-6">
-            <h2>Eye tracking</h3>  
-            <img class="example-img-lg " src="public/images/eye.jpg"/>
-            <ul class="list-minified">
-              <li>Vyžaduje speciální hardware</li>
-            </ul>
-          </div>        
-        </div>
-      </div>
     `
   },{
     id:4,

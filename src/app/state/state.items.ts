@@ -18,8 +18,9 @@ export const StateItems: StateItem[] = [
         ".prev:after": {"content":"'⇦'"},
          ".next.next-section:after": {"transform":"rotate(90deg)"},
          ".prev.prev-section:after": {"transform":"rotate(90deg)"},
-         ".q4 ng-component ul li:before":{"color":"#c8c8c8"},         
-         "a":{"color":"#fff"}     
+         ".q4 ng-component ul li:before":{"color":"#333"},         
+         "a":{"color":"#fff"},     
+         ".quadrants:after":{"display":"none"}     
       }
     }
   },
@@ -87,21 +88,25 @@ export const StateItems: StateItem[] = [
   {
     id:"/layout/1",
     css:{
-      q1: {width: "38.5%", height: "33%"},
-      q2: {width: "61.5%", height: "33%", "justify-content":"flex-start", "padding-left":"100px"},
-      q3: {width: "38.5%", height: "67%"},
-      q4: {width: "61.5%", height: "67%"},
-      global:{}
+      q1: {width: "38.5%", height: "38.5%"},
+      q2: {width: "61.5%", height: "38.5%", "justify-content":"flex-start", "padding-left":"100px"},
+      q3: {width: "38.5%", height: "61.5%"},
+      q4: {width: "61.5%", height: "61.5%"},
+      global:{
+        ".quadrants:after":{"opacity":"0.3","position":"absolute","display":"block", "background-size":"100% 100%","content":"''","width":"100%", "height":"100%","background-image":"url(public/images/fibonacci.png)"} 
+      }
     }
   },
   {
     id:"/layout/2",
     css:{
-      q1: {width: "25%", "height": "130px", "font-size":"12px", "align-items":"center"},
-      q2: {width: "75%", "height": "130px"},
-      q3: {width: "25%", "height": "calc(100% - 130px)", "font-size":"15px","background": "repeating-linear-gradient( to right, #aaa, #aaa 33.3%, #999 33.3%, #999 66.6% )"},
-      q4: {width: "75%", "height": "calc(100% - 130px)","background": "repeating-linear-gradient( to right, #ccc, #ccc 11.1%, #bbb 11.1%, #bbb 22.2% )"},
-      global:{}
+      q1: {width: "25%", "height": "80px", "font-size":"12px", "align-items":"center"},
+      q2: {width: "75%", "height": "80px"},
+      q3: {width: "25%", "height": "calc(100% - 80px)", "font-size":"15px","background": "repeating-linear-gradient( to right, #aaa, #aaa 33.3%, #999 33.3%, #999 66.6% )"},
+      q4: {width: "75%", "height": "calc(100% - 80px)","background": "repeating-linear-gradient( to right, #ccc, #ccc 11.1%, #bbb 11.1%, #bbb 22.2% )"},
+      global:{
+        ".quadrants:after":{"display":"none"} 
+      }
     }
   },
   {
@@ -135,6 +140,56 @@ export const StateItems: StateItem[] = [
     }
   },
   {
+    id:"/layout/6",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/layout/7",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/layout/8",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/layout/9",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
+    id:"/layout/10",
+    css:{
+      q1: {},
+      q2: {},
+      q3: {},
+      q4: {},
+      global:{}
+    }
+  },
+  {
     id:"/colors",
     css:{
       q1: {"background":"#B1487D", color: "#D074A3"},
@@ -150,16 +205,6 @@ export const StateItems: StateItem[] = [
   {
     id:"/colors/1",
     css:{
-      q1: {},
-      q2: {},
-      q3: {},
-      q4: {},
-      global:{}
-    }
-  },
-  {
-    id:"/colors/2",
-    css:{
       q1: {"background":"#4961A1", color: "#6F80B9"},
       q2: {"background":"#9E9161", color: "#9C8E57"},
       q3: {"background":"#928763"},
@@ -171,7 +216,7 @@ export const StateItems: StateItem[] = [
     }
   },
   {
-    id:"/colors/3",
+    id:"/colors/2",
     css:{
       q1: {"background":"#488e35", color: "#8ACD4A"},
       q2: {"background":"#8ACD4A", color: "#488e35"},

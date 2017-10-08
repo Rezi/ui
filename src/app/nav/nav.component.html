@@ -1,5 +1,7 @@
-<div class="mobile-icon">
-  <div class="nav-icon" [class.open]="menuOpened" (click)="menuOpened = !menuOpened">
+<div class="mobile-icon" (click)="menuOpened = !menuOpened">
+  <span class="icon-text">MENU</span>
+  
+  <div class="nav-icon" [class.open]="menuOpened" >
     <span></span>
     <span></span>
     <span></span>

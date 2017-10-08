@@ -49,7 +49,7 @@ ul {
   position: absolute;
   height: 6px;
   width: 100%;
-  background: #005D5D;
+  background: #000;
   border-radius: 6px;
   opacity: 1;
   left: 0;
@@ -112,6 +112,13 @@ ul {
 
   .mobile-icon {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .icon-text {
+      display: inline-block;
+      padding: 10px;
+    }
   }
 
   .mobile-menu {

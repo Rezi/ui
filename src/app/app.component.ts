@@ -30,11 +30,14 @@ interface paginationControll {
 
 export class AppComponent{
 
-  logo = 'CN ux&nbsp;&&nbsp;ui guide';
+  logo = 'UX&nbsp;&&nbsp;UI overview';
   page:PageItem;
   pagination:{}[];
   paginationControl:paginationControll;
   zoomedIn = false;
+  timeToShow: string = '';
+  minutes = 50;
+  activeTimeout:any = null;
 
 
   state:StateItem = {
@@ -55,7 +58,38 @@ export class AppComponent{
         this.getState(event.url);
       }
     });
+
+    const time = window.localStorage.getItem('time');
+    if(time) {
+      const timeArray = time.split(':').map((part:string) => Number(part));
+      //this.countdown(...timeArray);
+    } else {
+      this.countdown(this.minutes);
+    }    
   }
+
+  resetCountDown(){
+    clearTimeout(this.activeTimeout);
+    this.countdown(this.minutes);
+  }
+
+  countdown(minutes: number, seconds?: number) {
+    let rightSeconds = seconds || 60;
+    this.tick(minutes, rightSeconds);
+  }
+
+  tick(minutes: number, seconds:number) {
+        const current_minutes = minutes-1
+        seconds--;
+        window.localStorage.setItem('time', `${minutes}:${seconds}`);
+        this.timeToShow = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+          this.activeTimeout = setTimeout(() => this.tick(minutes, seconds), 1000);
+        } else if(minutes > 1){
+          this.activeTimeout = setTimeout(() => { this.countdown(current_minutes); }, 1000);
+        }
+    }
+
 
   scrollTo(element:any, to:number, duration:number) {
     let start = element.scrollTop,
