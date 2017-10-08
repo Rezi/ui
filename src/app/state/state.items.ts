@@ -10,7 +10,7 @@ export const StateItems: StateItem[] = [
       q3: {width:"50%", height: "50%","background":"#BBB", "border-right":"0", "padding":"20px"},
       q4: {width:"50%", height: "50%","background":"#aaa", color:"#000"},
       global:{
-        ".navLink.active":{"background":"#aaa", "color": "#fff"},
+        ".navLink.active":{"background":"#aaa", "color": "#000"},
         ".bar":{"display":"none !important"},
         ".prev": {"background":"#333"},
         ".next": {"background":"#333"},
@@ -115,7 +115,7 @@ export const StateItems: StateItem[] = [
       q1: {},
       q2: {},
       q3: {"background":"#BBB"},
-      q4: {"background":"#999"},
+      q4: {"background":"#AAA"},
       global:{}
     }
   },
@@ -219,11 +219,11 @@ export const StateItems: StateItem[] = [
     id:"/colors/2",
     css:{
       q1: {"background":"#488e35", color: "#8ACD4A"},
-      q2: {"background":"#8ACD4A", color: "#488e35"},
+      q2: {"background":"#8ACD4A", color: "#36622a"},
       q3: {"background":"#8ACD4A"},
       q4: {"background":"#d7f3bc", color: "#4c4e0f"},
       global:{
-        ".navLink.active":{"background":"#d7f3bc", "color": "#488e35"},
+        ".navLink.active":{"background":"#d7f3bc", "color": "#36622a"},
         ".q4 ng-component ul li:before":{"color":"#8ACD4A"},
         "a":{"color":"#000"}
       }

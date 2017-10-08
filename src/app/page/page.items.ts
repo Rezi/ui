@@ -417,6 +417,9 @@ export const PageItems: PageItem[] = [
         <li>Nejefektivnější testování probíhá ještě na wireframech</li>
         <li>Uživatel je dotazován co se stane, když na něco klikne apod.</li>
       </ul>
+      <p class="inline-links">
+      <a href="/public/video.html" target="_blank">Usability testing</a> 
+      </p>                                  
       `
   },{
     id:2,

@@ -62,7 +62,7 @@ export class AppComponent{
     const time = window.localStorage.getItem('time');
     if(time) {
       const timeArray = time.split(':').map((part:string) => Number(part));
-      //this.countdown(...timeArray);
+      this.countdown(timeArray[0], timeArray[1]);
     } else {
       this.countdown(this.minutes);
     }    

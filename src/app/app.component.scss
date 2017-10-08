@@ -88,7 +88,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $color-link;
+    color: $color-light;
     text-decoration: none;
     max-height: 48px;
     
@@ -142,6 +142,11 @@ main {
   }
 }
 
+@media (min-width:1000px){
+  .main-title {
+    font-size: 3rem !important;
+  }
+}
 
 
 @media (max-width:660px){
